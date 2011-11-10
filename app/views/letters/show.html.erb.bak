@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
- <%= getparagraph("RiskValues")%>
+ <%= getparagraph(params[:emphasis])%>
 </p>
 
 

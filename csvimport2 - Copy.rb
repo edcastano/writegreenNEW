@@ -1,14 +1,13 @@
 require './config/environment'
 require 'csv'
 
-CSV.foreach('c:\sites\sandbox\wgtopicfocus.csv') do |row|
-	record = Sentence.new(
-	:emphasis => row[0],
-	:content => row[1],
-	:order => row[2],
-	)
-    record.save!
-end	
+CSV.open('c:\sites\sandbox\wgtopicfocus.csv', 'r').each do |row|
+	d = Sentence.new
+	d.emphasis = row[0]
+	d.content = row[1]
+	d.order = row[2]
+	d.save 
+	end 
 	
 	
 	

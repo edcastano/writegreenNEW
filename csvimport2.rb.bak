@@ -2,7 +2,7 @@ require './config/environment'
 require 'csv'
 
 CSV.foreach('c:\sites\sandbox\wgtopicfocus.csv') do |row|
-	record = Sentence.new(
+	record = Associate.new(
 	:emphasis => row[0],
 	:content => row[1],
 	:order => row[2],

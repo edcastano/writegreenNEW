@@ -18,7 +18,7 @@
   ['Economic Security', 'Econ'], 
   ['Health & Pollution', 'FamPollute'],
   ['American Values', 'AmericanVal'],
-  ['Common sense', 'CommonSense']])) %>
+  ['Commensense', 'CommonSense']])) %>
   </div>   
   <div class="actions">
     <%= f.submit %>

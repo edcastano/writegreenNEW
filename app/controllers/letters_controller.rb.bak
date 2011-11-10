@@ -15,7 +15,6 @@ class LettersController < ApplicationController
   def show
     @letter = Letter.find(params[:id])
 
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @letter }
@@ -41,7 +40,7 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
-    @letter = Letter.new(params[:letter])
+    @letter = Letter.new(params[:emphasis])
 
     respond_to do |format|
       if @letter.save
