@@ -1,41 +1,75 @@
-body {font-family: Helvetica, Verdana, Arial, sans-serif; background: url("bg_green.png"); text-align: center; color: #666; font-size:16px;}
-a {color: #333;}
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
 
-h1 {margin: 0px 0px 0.5em 0px; padding: 0px; font-size: 1.5em;}
-h2 {margin: 0px 0px 1em 0px; padding: 0px; font-size: 1.3em;}
-h3 {margin: 0px 0px 1em 0px; padding: 0px; font-size: 1.2em;}
-h4 {margin: 0px 0px 1em 0px; padding: 0px; font-size: 1.1em;}
-h5 {margin: 0px 0px 1em 0px; padding: 0px; font-size: 1em;}
-hr {height: 1px; border: 0px; background: #bbb;}
+a img {
+  border: none;
+}
 
-#container {width: 960px; margin: 50px auto 20px auto; padding: 10px 30px 30px 30px; text-align: left; background: #fff; -moz-border-radius: 20px; -webkit-border-radius:20px;}
-#main {width: 400px; margin: 50px auto 20px auto; padding: 10px 30px 30px 30px; text-align: left; background: #fff; -moz-border-radius: 20px; -webkit-border-radius:20px;}
-#main_content {margin: 0px auto; width: 300px;}
+a {
+  color: #0000FF;
+}
 
-#controls {clear: both; float: left; width: 450px; margin: 0px 40px 0px 0px; padding: 0px; text-align: left;}
-#preview {float: left; width: 410px; margin: 27px 0px 0px 0px; padding: 20px; text-align: left; background: #fff;  -moz-border-radius: 20px; -webkit-border-radius:20px; border: 5px solid #bbb;}
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
 
-/* #header {background: url("leaf.png") no-repeat; margin: 0px; padding: 10px 0px 10px 60px; width: 92%;} */
-#header {margin: 0px; padding: 0px 0px 50px 0px; width: 100%; text-align: center;}
-#header img {padding-left: 50px;}
-#header2 {margin: 0px; padding: 0px 0px 30px 0px; width: 100%;}
-#header h1 {font-weight: bold; font-variant:small-caps; letter-spacing: 0.1em;  color: #696; font-size: 2em;}
-#nav {float: right; width: 40%; margin: 30px 15px 0px 0px; text-align: right;}
-#footer {clear: both; padding: 2em 0px 0px 0px; font-weight: bold; text-align: center; font-size: 0.8em;}
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
 
-form {margin: 0; padding: 0;}
-fieldset {margin: 1em; padding: 0px; border: 0px; height: 4em;}
-select, input {color: #666; font-size: 1em;}
-select {margin: 5px 0px 0px 10px;}
-input {width: 180px; margin: 5px 0 0 10px;}
-textarea {width: 280px; height: 150px; margin: 5px 0 0 10px;}
-input#reset {margin-left:0px;}
-textarea {overflow: auto;}
-p.button {text-align: center; padding: 1em;}
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
 
-label {font-weight: normal; float: left; margin: 0.5em 0.5em 0px 0px; font-size: 1em; font-weight: bold; width: 5em;}
-fieldset label {margin: 0px 0px 0px -1em; width: auto;}
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
 
-.ui-slider {clear: both; top: 1em; font-size: 0.9em; padding: 0px 50px;}
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
 
-#political, #length, #tone {display: none;}
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}

@@ -1,5 +1,4 @@
+
 <h1>Create your letter</h1>
-
 <%= render 'form' %>
-
 <%= link_to 'Back', letters_path %>

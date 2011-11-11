@@ -1,9 +1,11 @@
 
+<div id="container">
 <p id="notice"><%= notice %></p>
 
 <p>
  <%= getparagraph(@emphasis, "emphasis")%><br /><br />
  <%= getparagraph(@ideologyKey, "ideology")%><br /><br />
+ 
  <%= "Emphasis:" %>
  <%= @emphasis %>
  <br /><br />
@@ -13,5 +15,5 @@
 
 <%= link_to 'Back', new_letter_path %>
 
-
+</div>
 
