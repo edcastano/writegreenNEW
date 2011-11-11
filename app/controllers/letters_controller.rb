@@ -1,6 +1,8 @@
 class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
+  
+    
   def index
     @letters = Letter.all
 
@@ -13,8 +15,11 @@ class LettersController < ApplicationController
   # GET /letters/1
   # GET /letters/1.json
   def show
-    @letter = Letter.find(params[:id])
-
+    #@letter = Letter.find(params[:id])
+	@emphasis = params[:emphasis]
+	@political_ideology = params[:ideology]
+	@religion = params[:religion]
+	@ideologyKey = @political_ideology + @religion
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +30,7 @@ class LettersController < ApplicationController
   # GET /letters/new
   # GET /letters/new.json
   def new
-    @letter = Letter.new
+    #@letter = Letter.new
 
     respond_to do |format|
       format.html # new.html.erb

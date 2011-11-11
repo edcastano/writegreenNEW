@@ -1,18 +1,12 @@
 require './config/environment'
-require 'csv'
 
-CSV.foreach('c:\sites\writegreenv2\ideology.csv') do |row|
-	record = Sentence.new(
-	:emphasis => row[0],
-	:content => row[1],
-	:order => row[2],
-	)
-    record.save!
-end	
-	
-	
-	
-	
+id = 712
+while id != 892
+s = Sentence.find(id)
+s.destroy
+id += 1
+end
+
 	
 	
 #File.open(filename).each { |line|

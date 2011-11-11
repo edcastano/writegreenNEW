@@ -1,9 +1,17 @@
+
 <p id="notice"><%= notice %></p>
 
 <p>
- <%= getparagraph("RiskValues")%>
+ <%= getparagraph(@emphasis, "emphasis")%><br /><br />
+ <%= getparagraph(@ideologyKey, "ideology")%><br /><br />
+ <%= "Emphasis:" %>
+ <%= @emphasis %>
+ <br /><br />
+ <%= "Ideology:" %>
+ <%= @ideologyKey %>
 </p>
 
+<%= link_to 'Back', new_letter_path %>
 
-<%= link_to 'Edit', edit_letter_path(@letter) %> |
-<%= link_to 'Back', letters_path %>
+
+

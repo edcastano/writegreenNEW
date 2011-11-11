@@ -1,9 +1,54 @@
+<head>
+<body>
 <p id="notice"><%= notice %></p>
 
 <p>
- <%= getparagraph(params[:emphasis])%>
+ <%= getparagraph(@emphasis, "emphasis")%><br /><br />
+ <%= getparagraph(@ideologyKey, "ideology")%><br /><br />
+ <%= "Emphasis:" %>
+ <%= @emphasis %>
+ <br /><br />
+ <%= "Ideology:" %>
+ <%= @ideologyKey %>
 </p>
 
+<%= link_to 'Back', new_letter_path %>
 
-<%= link_to 'Edit', edit_letter_path(@letter) %> |
-<%= link_to 'Back', letters_path %>
+
+<div id="main">
+  <div id="header"><img src="static/images/writegreen_logo2.png" alt="WriteGreen" /></div>
+  <div id="content">
+    <h2>Create your letter</h2>
+    <div id="main_content">
+      <form id="form1" action="https://edward-letters.appspot.com/letter" method="post">
+        <p>
+          <label for"concern">Concern</label>
+          <select id="concern" name="concern">
+            <option value="">Alternative energy</option>
+            <option value="">Deforestation</option>
+            <option value="">Global warming</option>
+            <option value="">Water Pollution</option>
+            <option value="">Other</option>
+          </select>
+        </p>
+        <p>
+          <label for"name">Name</label>
+          <input id="name" name="name" />
+        </p>
+        <p>
+          <label for"zip_code">Zip Code</label>
+          <input id="zip_code" name="zip_code" />
+        </p>
+        <p class="button">
+          <input type="submit" value="Create Letter">
+        </p>
+        <input type="hidden" name="political" value="Conservative">
+        <input type="hidden" name="tone" value="Serious">
+        <input type="hidden" name="length" value="Long">
+      </form>
+    </div>
+  </div>
+  <div id="footer"> Copyright 2009. All Rights Reserved. </div>
+</div>
+</body>
+</head>

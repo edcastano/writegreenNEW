@@ -1,27 +1,41 @@
-<%= form_for(@letter) do |f| %>
-  <% if @letter.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@letter.errors.count, "error") %> prohibited this letter from being saved:</h2>
 
-      <ul>
-      <% @letter.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-  
-  <div class="field">
-  <%= f.label :Select_Emphasis %><br />
-  <%= f.select(:emphasis, options_for_select([['Risk/Personal Values', 'RiskValues'],
+
+<%= form_tag(letter_path, :method =>'get', :multipart => true) do %> 
+
+ <div class="field">
+  <%= label_tag(:name, "Name")%>
+  <%= text_field_tag(:name) %>
+ </div>   
+ 
+ <div class="field">
+  <%= label_tag(:emphasis, "Select your Emphasis")%><br />
+  <%= select_tag(:emphasis, options_for_select([['Risk/Personal Values', 'RiskValues'],
   ['Economic Security', 'Econ'], 
   ['Health & Pollution', 'FamPollute'],
   ['American Values', 'AmericanVal'],
   ['Common sense', 'CommonSense']])) %>
   </div>   
+    
+  <div class="field">
+  <%= label_tag(:ideology, "Select Ideological Perspective") %><br />
+  <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
+  ['Conservative', 'Conservative'], 
+  ['Moderate', 'Moderate']])) %>
+  </div>   
+  
+  <div class="field">
+  <%= label_tag(:religion, "Select Religious Perspective") %><br />
+  <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
+  ['Christian', 'Christian']])) %>
+  </div>   
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag %>
   </div>
 
+  
+
+ 
 <% end %>
+
+
