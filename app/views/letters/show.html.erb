@@ -1,19 +1,22 @@
 
-<div id="container">
+<div id="lettercontainer">
+<%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <p id="notice"><%= notice %></p>
-
-<p>
- <%= getparagraph(@emphasis, "emphasis")%><br /><br />
- <%= getparagraph(@ideologyKey, "ideology")%><br /><br />
+<p> <%= "Dear Senator," %></p>
+ <p><%= getparagraph(@emphasis, "emphasis")%></p>
+ <p><%= getparagraph(@ideologyKey, "ideology")%></p>
+ <% if @geography != "Other" %>
+   <p>
+     <%= getparagraph(@geography, "geography") %>
+   </p>
+ <% end %> 
+ <p><%= "Sincerely," %></p>
+ <p><%= @name %><br /></p>
  
- <%= "Emphasis:" %>
- <%= @emphasis %>
- <br /><br />
- <%= "Ideology:" %>
- <%= @ideologyKey %>
-</p>
-
-<%= link_to 'Back', new_letter_path %>
+<%= link_to 'Change letter', new_letter_path %>
 
 </div>
+
+
+ 
 

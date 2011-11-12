@@ -1,41 +1,47 @@
 
-
+<div id="main_content">
 <%= form_tag(letter_path, :method =>'get', :multipart => true) do %> 
 
- <div class="field">
-  <%= label_tag(:name, "Name")%>
-  <%= text_field_tag(:name) %>
- </div>   
- 
- <div class="field">
-  <%= label_tag(:emphasis, "Select your Emphasis")%><br />
+<p>
+  <div class="field">
+  <%= label_tag(:name, "Name", :class => "label")%>
+  <%= text_field_tag(:name, nil, :class => "fieldset") %>
+  </div>   
+</p>
+<p>
+  <div class="field">
+  <%= label_tag(:emphasis, "Emphasis", :class => "label")%>
   <%= select_tag(:emphasis, options_for_select([['Risk/Personal Values', 'RiskValues'],
   ['Economic Security', 'Econ'], 
   ['Health & Pollution', 'FamPollute'],
   ['American Values', 'AmericanVal'],
-  ['Common sense', 'CommonSense']])) %>
+  ['Common sense', 'CommonSense']]), :class => "fieldset") %>
   </div>   
-    
+</p> 
   <div class="field">
-  <%= label_tag(:ideology, "Select Ideological Perspective") %><br />
+  <%= label_tag(:ideology, "Perspective", :class => "label") %>
   <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
   ['Conservative', 'Conservative'], 
-  ['Moderate', 'Moderate']])) %>
+  ['Moderate', 'Moderate']]), :class => "fieldset") %>
   </div>   
   
   <div class="field">
-  <%= label_tag(:religion, "Select Religious Perspective") %><br />
+  <%= label_tag(:religion, "Religion", :class => "label") %>
   <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
-  ['Christian', 'Christian']])) %>
+  ['Christian', 'Christian']]), :class => "fieldset") %>
   </div>   
   
+  <div class="field">
+  <%= label_tag(:geography, "Geography", :class => "label") %>
+  <%= select_tag(:geography, options_for_select([['California', 'California'],
+  ['Other', 'Other']]), :class => "fieldset") %>
+  </div> 
+  <p>
   <div class="actions">
-    <%= submit_tag %>
+    <%= submit_tag("Create letter", :class => "fieldset button") %>
   </div>
-
-  
-
- 
+  </p>
 <% end %>
-
+<%-# link_to 'Back', letters_path, :class => "label" %>
+</div>
 

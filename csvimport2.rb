@@ -1,9 +1,9 @@
 require './config/environment'
 require 'csv'
 
-CSV.foreach('c:\sites\writegreenv2\ideology.csv') do |row|
+CSV.foreach('c:\sites\writegreenv2\geography.csv') do |row|
 	record = Sentence.new(
-	:ideology => row[0],
+	:geography => row[0],
 	:content => row[1],
 	:order => row[2],
 	)

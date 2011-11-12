@@ -16,10 +16,12 @@ class LettersController < ApplicationController
   # GET /letters/1.json
   def show
     #@letter = Letter.find(params[:id])
+	@name = params[:name]
 	@emphasis = params[:emphasis]
 	@political_ideology = params[:ideology]
 	@religion = params[:religion]
 	@ideologyKey = @political_ideology + @religion
+	@geography = params[:geography]
 
     respond_to do |format|
       format.html # show.html.erb

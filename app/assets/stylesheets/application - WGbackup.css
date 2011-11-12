@@ -7,7 +7,7 @@
 body {font-family: Helvetica, Verdana, Arial, sans-serif; 
   background: url("wgbg.png"); 
   background-color: #8EC15B;
-  /*text-align: left; */
+  text-align: left; 
   /*color: #666; */
   font-size:16px;}
 
@@ -31,7 +31,7 @@ a img {
 }
 
 .button {    
-   /*text-align: center;*/
+   text-algin: center;
    border-top: 1px solid #a8e3b7;
    background: #c8edbd;
    background: -webkit-gradient(linear, left top, left bottom, from(#8ec15b), to(#c8edbd));
