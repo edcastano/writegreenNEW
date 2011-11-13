@@ -31,7 +31,7 @@ a img {
 }
 
 .button {    
-   text-align: center;
+   /*text-align: center;*/
    border-top: 1px solid #a8e3b7;
    background: #c8edbd;
    background: -webkit-gradient(linear, left top, left bottom, from(#8ec15b), to(#c8edbd));
@@ -90,7 +90,7 @@ a img {
 }
 
 #lettercontainer {
-  width: 75%;
+  width: 50%;
   /*height: auto;*/
   margin: 0 auto;
   background-color: #FFF;
@@ -101,9 +101,9 @@ a img {
 }
 
 #formcontainer {
-  width: 75%;
+  width: 400px;
   height: 400px;
-  margin: 0 auto;
+  margin: 20 auto;
   background-color: #FFF;
   padding: 20px 40px;
   border: solid 2px black;

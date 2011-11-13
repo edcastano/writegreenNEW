@@ -90,7 +90,7 @@ a img {
 }
 
 #lettercontainer {
-  width: 75%;
+  width: 50%;
   /*height: auto;*/
   margin: 0 auto;
   background-color: #FFF;
@@ -101,7 +101,7 @@ a img {
 }
 
 #formcontainer {
-  width: 75%;
+  width: 400px;
   height: 400px;
   margin: 0 auto;
   background-color: #FFF;
