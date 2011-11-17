@@ -12,6 +12,17 @@
  <% end %> 
  <p><%= "Sincerely," %></p>
  <p><%= @name %><br /></p>
+
+
+	<%congresspeople = Sunlight::Legislator.all_for(:address => "123 Fifth Ave New York, NY 10003")%>
+	<%senior_senator = congresspeople[:senior_senator]%>
+	<%junior_senator = congresspeople[:junior_senator]%>
+	<%representative = congresspeople[:representative]%>
+
+	<%= junior_senator.firstname          %>
+	<%= junior_senator.lastname           %>
+	<%= junior_senator.congress_office    %>
+	<%= junior_senator.phone              %>
  
 <%= link_to 'Change letter', new_letter_path %>
 
