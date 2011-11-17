@@ -22,6 +22,21 @@ class LettersController < ApplicationController
 	@religion = params[:religion]
 	@ideologyKey = @political_ideology + @religion
 	@geography = params[:geography]
+  @street_address = params[:street_address]
+  @city = params[:city]
+  @state = params[:state]
+  @zipcode = params[:zipcode]
+  @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
+
+
+  @congresspeople = Sunlight::Legislator.all_for(:address => @address)
+	@senior_senator = @congresspeople[:senior_senator]
+	@junior_senator = @congresspeople[:junior_senator]
+	@representative = @congresspeople[:representative]
+
+
+
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -48,7 +63,7 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
-    @letter = Letter.new(params[:letter])
+    #@letter = Letter.new(params[:letter])
 
     respond_to do |format|
       if @letter.save
@@ -64,7 +79,7 @@ class LettersController < ApplicationController
   # PUT /letters/1
   # PUT /letters/1.json
   def update
-    @letter = Letter.find(params[:id])
+    #@letter = Letter.find(params[:id])
 
     respond_to do |format|
       if @letter.update_attributes(params[:letter])
