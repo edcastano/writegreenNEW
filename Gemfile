@@ -17,6 +17,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'sunlight'
+gem 'ym4r'
+gem 'json'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

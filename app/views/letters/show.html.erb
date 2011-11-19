@@ -1,32 +1,150 @@
 
+  <% @sen_senator_title = 'Senator '+@senior_senator.firstname + " " + @senior_senator.lastname %><br />
+  <% @jun_senator_title = 'Senator '+@junior_senator.firstname + " " + @junior_senator.lastname%><br />
+  <% @rep_title = 'Representative '+@representative.firstname + " " + @representative.lastname %><br />
+
+  <% @sen_senator_address = @senior_senator.congress_office %><br />
+  <% @jun_senator_address = @junior_senator.congress_office%><br />
+  <% @rep_address = @representative.congress_office %><br />
+
+  <% @sen_senator_title_lastname = 'Senator' + ' ' + @senior_senator.lastname %><br />
+  <% @jun_senator_title_lastname = 'Senator' + ' ' + @junior_senator.lastname %><br />
+  <% @rep_title_lastname = 'Representative' + ' ' + @representative.lastname %><br />
+
+  <% @sen_senator_name = @senior_senator.firstname + " " + @senior_senator.lastname %><br />
+  <% @jun_senator_name = @junior_senator.firstname + " " + @junior_senator.lastname %><br />
+  <% @rep_name = @representative.firstname + " " + @representative.lastname %><br />
+
+  <% rep_address = Hash[[[@sen_senator_title, @sen_senator_address], [@jun_senator_title, @jun_senator_address], [@rep_title, @rep_address]]]  %>
+  <% rep_lastname = Hash[[[@sen_senator_title, @sen_senator_title_lastname], [@jun_senator_title, @jun_senator_title_lastname], [@rep_title, @rep_title_lastname]]]  %>
+  <% rep_name = Hash[[[@sen_senator_title, @sen_senator_name], [@jun_senator_title, @jun_senator_name], [@rep_title, @rep_name]]]  %>
+  <% if rep_address[@recipient] != nil %>
+  <% recipient_address = rep_address[@recipient] %>
+  <% recipient_lastname = rep_lastname[@recipient] %>
+  <% recipient_name = rep_name[@recipient]%>
+  <% else %>
+  <% recipient_lastname = " Representative"%>
+  <% end %>
+
+<div id="formcontainer">
+        <div id="main_content">
+        <%= form_tag(:method =>'put', :multipart => true) do %>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:name, "Name", :class => "label")%>
+          <%= text_field_tag(:name, @name, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:street_address, "Address", :class => "label")%>
+          <%= text_field_tag(:street_address, @street_address, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:city, "City", :class => "label")%>
+          <%= text_field_tag(:city, @city, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:state, "State", :class => "label")%>
+          <%= text_field_tag(:state, @state, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:zipcode, "Zipcode", :class => "label")%>
+          <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset") %>
+          </div>
+        </p>
+
+
+        <p>
+          <div class="field">
+          <%= label_tag(:recipient, "Recipient", :class => "label")%>
+          <%= select_tag(:recipient, options_for_select([@sen_senator_title,@jun_senator_title, @rep_title], :selected => @recipient),
+                         :class => "fieldset") %>
+          </div>
+        </p>
+
+
+        <p>
+          <div class="field">
+          <%= label_tag(:emphasis, "Emphasis", :class => "label")%>
+          <%= select_tag(:emphasis, options_for_select([['Risk/Personal Values', 'RiskValues'],
+          ['Economic Security', 'Econ'],
+          ['Health & Pollution', 'FamPollute'],
+          ['American Values', 'AmericanVal'],
+          ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
+          </div>
+        </p>
+          <div class="field">
+          <%= label_tag(:ideology, "Perspective", :class => "label") %>
+          <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
+          ['Conservative', 'Conservative'],
+          ['Moderate', 'Moderate']], :selected => @political_ideology), :class => "fieldset") %>
+          </div>
+
+          <div class="field">
+          <%= label_tag(:religion, "Religion", :class => "label") %>
+          <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
+          ['Christian', 'Christian']], :selected => @religion), :class => "fieldset") %>
+          </div>
+
+          <div class="field">
+          <%= label_tag(:geography, "Geography", :class => "label") %>
+          <%= select_tag(:geography, options_for_select([['California', 'California'],
+          ['Other', 'Other']], :selected => @geography), :class => "fieldset") %>
+          </div>
+          <p>
+          <div class="actions">
+            <%= submit_tag("Create letter", :class => "fieldset button") %>
+          </div>
+          </p>
+        <% end %>
+        </div>
+</div>
+
+
 <div id="lettercontainer">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <p id="notice"><%= notice %></p>
-<p> <%= "Dear Senator," %></p>
+ <% if @recipient != " Representative" %>
+   <%= recipient_name %><br>
+   <%= recipient_address %><br>
+   <%= "Washington DC 20510" %><br>
+ <% end %>
+ <p> <%= "Dear " + recipient_lastname + ","%></p>
  <p><%= getparagraph(@emphasis, "emphasis")%></p>
  <p><%= getparagraph(@ideologyKey, "ideology")%></p>
  <% if @geography != "Other" %>
    <p>
      <%= getparagraph(@geography, "geography") %>
    </p>
- <% end %> 
+ <% end %>
  <p><%= "Sincerely," %></p>
- <p><%= @name %><br /></p>
+ <%= @name %><br />
+ <%= @street_address %><br />
+ <%= @city + ", " + @state + " " + @zipcode%><br />
 
+ <%-# @address %>
+  <h3> These are your selections</h3>
+  <%= @emphasis %>
+  <%= @political_ideology %>
+  <%= @religion %>
+  <%= @geography %>
 
-	<%congresspeople = Sunlight::Legislator.all_for(:address => "123 Fifth Ave New York, NY 10003")%>
-	<%senior_senator = congresspeople[:senior_senator]%>
-	<%junior_senator = congresspeople[:junior_senator]%>
-	<%representative = congresspeople[:representative]%>
-
-	<%= junior_senator.firstname          %>
-	<%= junior_senator.lastname           %>
-	<%= junior_senator.congress_office    %>
-	<%= junior_senator.phone              %>
- 
 <%= link_to 'Change letter', new_letter_path %>
 
 </div>
+
 
 
  

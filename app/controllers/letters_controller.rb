@@ -16,27 +16,29 @@ class LettersController < ApplicationController
   # GET /letters/1.json
   def show
     #@letter = Letter.find(params[:id])
-	@name = params[:name]
-	@emphasis = params[:emphasis]
-	@political_ideology = params[:ideology]
-	@religion = params[:religion]
-	@ideologyKey = @political_ideology + @religion
-	@geography = params[:geography]
+  @name = params[:name]
   @street_address = params[:street_address]
   @city = params[:city]
   @state = params[:state]
   @zipcode = params[:zipcode]
   @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
 
+  @emphasis = params[:emphasis]
+  if @emphasis != nil
+    @emphasis = params[:emphasis]
+	  @political_ideology = params[:ideology]
+	  @religion = params[:religion]
+	  @ideologyKey = @political_ideology + @religion
+	  @geography = params[:geography]
+    @recipient = params[:recipient]
+  else
+    @recipient = " Representative"
+  end
 
   @congresspeople = Sunlight::Legislator.all_for(:address => @address)
-	@senior_senator = @congresspeople[:senior_senator]
-	@junior_senator = @congresspeople[:junior_senator]
-	@representative = @congresspeople[:representative]
-
-
-
-
+  @senior_senator = @congresspeople[:senior_senator]
+  @junior_senator = @congresspeople[:junior_senator]
+  @representative = @congresspeople[:representative]
 
     respond_to do |format|
       format.html # show.html.erb
@@ -48,7 +50,7 @@ class LettersController < ApplicationController
   # GET /letters/new.json
   def new
     #@letter = Letter.new
-
+  @recipient = nil 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @letter }
