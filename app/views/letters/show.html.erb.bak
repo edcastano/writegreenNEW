@@ -1,18 +1,8 @@
-<h3> These are your congress people</h3>
-  <% @sen_senator = 'Senator '+@senior_senator.firstname + " " + @senior_senator.lastname %><br />
-  <% @jun_senator = 'Senator '+@junior_senator.firstname + " " + @junior_senator.lastname%><br />
-  <% @rep = 'Representative '+@representative.firstname + " " + @representative.lastname %><br />
-  <% if @recipient == nil %>
-  <% @recipient = "REPS" %>    
-  <% else %>
-  <%= @recipient %>
-  <% end %>
-  <%-# "Here is the " + @emphasis %>
-  
-  
+
+
 <div id="formcontainer">
         <div id="main_content">
-        <%= form_tag(letter_path, :method =>'get', :multipart => true) do %>
+        <%= form_tag(:method =>'put', :multipart => true) do %>
 
         <p>
           <div class="field">
@@ -20,14 +10,6 @@
           <%= text_field_tag(:name, @name, :class => "fieldset") %>
           </div>
         </p>
-
-
-
-
-  <%-#@street_address = params[:street_address]
-  #@city = params[:city]
-  #@state = params[:state]
-  #@zipcode%>
 
         <p>
           <div class="field">
@@ -61,7 +43,7 @@
         <p>
           <div class="field">
           <%= label_tag(:recipient, "Recipient", :class => "label")%>
-          <%= select_tag(:recipient, options_for_select([@sen_senator,@jun_senator, @rep]),
+          <%= select_tag(:recipient, options_for_select([@sen_senator_title,@jun_senator_title, @rep_title], :selected => @recipient),
                          :class => "fieldset") %>
           </div>
         </p>
@@ -74,26 +56,26 @@
           ['Economic Security', 'Econ'],
           ['Health & Pollution', 'FamPollute'],
           ['American Values', 'AmericanVal'],
-          ['Common sense', 'CommonSense']]), :class => "fieldset") %>
+          ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
           </div>
         </p>
           <div class="field">
           <%= label_tag(:ideology, "Perspective", :class => "label") %>
           <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
           ['Conservative', 'Conservative'],
-          ['Moderate', 'Moderate']]), :class => "fieldset") %>
+          ['Moderate', 'Moderate']], :selected => @political_ideology), :class => "fieldset") %>
           </div>
 
           <div class="field">
           <%= label_tag(:religion, "Religion", :class => "label") %>
           <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
-          ['Christian', 'Christian']]), :class => "fieldset") %>
+          ['Christian', 'Christian']], :selected => @religion), :class => "fieldset") %>
           </div>
 
           <div class="field">
           <%= label_tag(:geography, "Geography", :class => "label") %>
           <%= select_tag(:geography, options_for_select([['California', 'California'],
-          ['Other', 'Other']]), :class => "fieldset") %>
+          ['Other', 'Other']], :selected => @geography), :class => "fieldset") %>
           </div>
           <p>
           <div class="actions">
@@ -108,7 +90,12 @@
 <div id="lettercontainer">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <p id="notice"><%= notice %></p>
-<p> <%= "Dear " + "hot dog" + ","%></p>
+ <% if @recipient != " Representative" %>
+   <%= recipient_name %><br>
+   <%= recipient_address %><br>
+   <%= "Washington DC 20510" %><br>
+ <% end %>
+ <p> <%= "Dear " + recipient_lastname + ","%></p>
  <p><%= getparagraph(@emphasis, "emphasis")%></p>
  <p><%= getparagraph(@ideologyKey, "ideology")%></p>
  <% if @geography != "Other" %>
@@ -121,8 +108,12 @@
  <%= @street_address %><br />
  <%= @city + ", " + @state + " " + @zipcode%><br />
 
- <%= @address %>
-
+ <%-# @address %>
+  <h3> These are your selections</h3>
+  <%= @emphasis %>
+  <%= @political_ideology %>
+  <%= @religion %>
+  <%= @geography %>
 
 <%= link_to 'Change letter', new_letter_path %>
 

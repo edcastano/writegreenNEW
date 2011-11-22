@@ -1,30 +1,4 @@
 
-  <% @sen_senator_title = 'Senator '+@senior_senator.firstname + " " + @senior_senator.lastname %><br />
-  <% @jun_senator_title = 'Senator '+@junior_senator.firstname + " " + @junior_senator.lastname%><br />
-  <% @rep_title = 'Representative '+@representative.firstname + " " + @representative.lastname %><br />
-
-  <% @sen_senator_address = @senior_senator.congress_office %><br />
-  <% @jun_senator_address = @junior_senator.congress_office%><br />
-  <% @rep_address = @representative.congress_office %><br />
-
-  <% @sen_senator_title_lastname = 'Senator' + ' ' + @senior_senator.lastname %><br />
-  <% @jun_senator_title_lastname = 'Senator' + ' ' + @junior_senator.lastname %><br />
-  <% @rep_title_lastname = 'Representative' + ' ' + @representative.lastname %><br />
-
-  <% @sen_senator_name = @senior_senator.firstname + " " + @senior_senator.lastname %><br />
-  <% @jun_senator_name = @junior_senator.firstname + " " + @junior_senator.lastname %><br />
-  <% @rep_name = @representative.firstname + " " + @representative.lastname %><br />
-
-  <% rep_address = Hash[[[@sen_senator_title, @sen_senator_address], [@jun_senator_title, @jun_senator_address], [@rep_title, @rep_address]]]  %>
-  <% rep_lastname = Hash[[[@sen_senator_title, @sen_senator_title_lastname], [@jun_senator_title, @jun_senator_title_lastname], [@rep_title, @rep_title_lastname]]]  %>
-  <% rep_name = Hash[[[@sen_senator_title, @sen_senator_name], [@jun_senator_title, @jun_senator_name], [@rep_title, @rep_name]]]  %>
-  <% if rep_address[@recipient] != nil %>
-  <% recipient_address = rep_address[@recipient] %>
-  <% recipient_lastname = rep_lastname[@recipient] %>
-  <% recipient_name = rep_name[@recipient]%>
-  <% else %>
-  <% recipient_lastname = " Representative"%>
-  <% end %>
 
 <div id="formcontainer">
         <div id="main_content">
@@ -117,11 +91,11 @@
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <p id="notice"><%= notice %></p>
  <% if @recipient != " Representative" %>
-   <%= recipient_name %><br>
-   <%= recipient_address %><br>
+   <%= @recipient_name %><br>
+   <%= @recipient_address %><br>
    <%= "Washington DC 20510" %><br>
  <% end %>
- <p> <%= "Dear " + recipient_lastname + ","%></p>
+ <p> <%= "Dear " + @recipient_lastname + ","%></p>
  <p><%= getparagraph(@emphasis, "emphasis")%></p>
  <p><%= getparagraph(@ideologyKey, "ideology")%></p>
  <% if @geography != "Other" %>
