@@ -1,4 +1,4 @@
-class LettersController < ApplicationController <ActiveForm
+class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
   

@@ -94,7 +94,7 @@ class LettersController < ApplicationController
     #@letter = Letter.new(params[:letter])
 
     respond_to do |format|
-      if @letter.save
+      if @letter.valid?
         format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
         format.json { render json: @letter, status: :created, location: @letter }
       else
