@@ -1,6 +1,8 @@
 
 
-<div id="formcontainer">
+<div id="formcontainer" style="height:auto">
+<%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
+<h3>Your information</h3>
         <div id="main_content">
         <%= form_tag(:method =>'put', :multipart => true) do %>
 
@@ -39,7 +41,13 @@
           </div>
         </p>
 
-
+		<div id="main_content" style="background-color:#CCCCCC;border-radius: 10px;">
+		<p>
+		  <div class="label" style="width:auto;">
+		  <h3> Customize your letter </h3>
+		  </div>
+		</p>
+		
         <p>
           <div class="field">
           <%= label_tag(:recipient, "Recipient", :class => "label")%>
@@ -47,7 +55,6 @@
                          :class => "fieldset") %>
           </div>
         </p>
-
 
         <p>
           <div class="field">
@@ -84,18 +91,18 @@
           </p>
         <% end %>
         </div>
+		</div>
 </div>
 
 
 <div id="lettercontainer">
-<%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <p id="notice"><%= notice %></p>
- <% if @recipient != " Representative" %>
-   <%= recipient_name %><br>
-   <%= recipient_address %><br>
+ <% if @recipient_lastname != " Representative" %>
+   <%= @recipient_name %><br>
+   <%= @recipient_address %><br>
    <%= "Washington DC 20510" %><br>
  <% end %>
- <p> <%= "Dear " + recipient_lastname + ","%></p>
+ <p> <%= "Dear " + @recipient_lastname + ","%></p>
  <p><%= getparagraph(@emphasis, "emphasis")%></p>
  <p><%= getparagraph(@ideologyKey, "ideology")%></p>
  <% if @geography != "Other" %>
