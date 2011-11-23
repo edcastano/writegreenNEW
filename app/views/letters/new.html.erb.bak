@@ -1,13 +1,15 @@
-<div id="formcontainer">
+<div id="formcontainer" style="height:400px;">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <h3>Your information</h3>
 <%= render 'form' %>
 </div>
-<div id="formcontainer" style="background-color:#EEEEEE; padding-top:90px;height:530px;">
-<h3>Instructions</h3>
-<br> 
-<p> Your name will be used to personalize your letter and your 
-address to match you with your two senators and congressional representative. </p>
-<p> Once you enter your name and address, you'll get a chance to select the
-recipient and customize your letter. </p>
+<div id="formcontainer" style="background-color:#EEEEEE;height:400px;width:340px;">
+
+	<div style="padding-top:70px">
+	<h3>Instructions</h3>
+	<p style="vertical-aling:middle"> Your name will be used to personalize your letter and your 
+	address to match you with your two senators and congressional representative. </p>
+	<p> Once you enter your name and address, you'll get a chance to select the
+	recipient and customize your letter. </p>
+	</div>
 </div>

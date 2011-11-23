@@ -1,45 +1,46 @@
 
-<div id="main_content">
+<div id="letter_options" style="width:300;">
 <%= form_tag(letter_path, :method =>'get', :multipart => true) do %> 
 
 <p>
   <div class="field">
   <%= label_tag(:name, "Name", :class => "label")%>
-  <%= text_field_tag(:name, nil, :class => "fieldset") %>
+  <%= text_field_tag(:name, @name, :class => "fieldset") %>
   </div>   
 </p>
+
 <p>
   <div class="field">
-  <%= label_tag(:emphasis, "Emphasis", :class => "label")%>
-  <%= select_tag(:emphasis, options_for_select([['Risk/Personal Values', 'RiskValues'],
-  ['Economic Security', 'Econ'], 
-  ['Health & Pollution', 'FamPollute'],
-  ['American Values', 'AmericanVal'],
-  ['Common sense', 'CommonSense']]), :class => "fieldset") %>
-  </div>   
-</p> 
+  <%= label_tag(:street_address, "Address", :class => "label")%>
+  <%= text_field_tag(:street_address, nil, :class => "fieldset") %>
+  </div>
+</p>
+
+<p>
   <div class="field">
-  <%= label_tag(:ideology, "Perspective", :class => "label") %>
-  <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
-  ['Conservative', 'Conservative'], 
-  ['Moderate', 'Moderate']]), :class => "fieldset") %>
-  </div>   
-  
+  <%= label_tag(:city, "City", :class => "label")%>
+  <%= text_field_tag(:city, nil, :class => "fieldset") %>
+  </div>
+</p>
+
+<p>
   <div class="field">
-  <%= label_tag(:religion, "Religion", :class => "label") %>
-  <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
-  ['Christian', 'Christian']]), :class => "fieldset") %>
-  </div>   
-  
+  <%= label_tag(:state, "State", :class => "label")%>
+  <%= text_field_tag(:state, nil, :class => "fieldset") %>
+  </div>
+</p>
+
+<p>
   <div class="field">
-  <%= label_tag(:geography, "Geography", :class => "label") %>
-  <%= select_tag(:geography, options_for_select([['California', 'California'],
-  ['Other', 'Other']]), :class => "fieldset") %>
-  </div> 
-  
+  <%= label_tag(:zipcode, "Zipcode", :class => "label")%>
+  <%= text_field_tag(:zipcode, nil, :class => "fieldset") %>
+  </div>
+</p>
+  <p>
   <div class="actions">
     <%= submit_tag("Create letter", :class => "fieldset button") %>
   </div>
+  </p>
 <% end %>
 <%-# link_to 'Back', letters_path, :class => "label" %>
 </div>

@@ -1,15 +1,15 @@
 
 
-<div id="formcontainer" style="height:auto">
+<div id="formcontainer" class="clear" style="height:auto">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <h3>Your information</h3>
-        <div id="main_content">
+        <div id="letter_options">
         <%= form_tag(:method =>'put', :multipart => true) do %>
 
         <p>
           <div class="field">
-          <%= label_tag(:name, "Name", :class => "label")%>
-          <%= text_field_tag(:name, @name, :class => "fieldset") %>
+          <%= label_tag(:name, "Name", :class => "label",  :style => "margin-top:0px;")%>
+          <%= text_field_tag(:name, @name, :class => "fieldset",  :style => "margin-top:0px;") %>
           </div>
         </p>
 
@@ -35,24 +35,21 @@
         </p>
 
         <p>
-          <div class="field">
+          <div class="clear">
           <%= label_tag(:zipcode, "Zipcode", :class => "label")%>
           <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset") %>
           </div>
         </p>
 		</div>
-		<div id="main_content" style="background-color:#CCCCCC;border-radius: 10px;">
-		<p>
-		  <div class="label" style="width:auto;">
-		  <h3> Customize your letter </h3>
-		  </div>
-		</p>
 		
+		<h3> Customize your letter </h3>		
+		<div id="letter_options" class="clear" >
+				
         <p>
           <div class="field">
-          <%= label_tag(:recipient, "Recipient", :class => "label")%>
+          <%= label_tag(:recipient, "Recipient", :class => "label",  :style => "margin-top:0px;")%>
           <%= select_tag(:recipient, options_for_select([@sen_senator_title,@jun_senator_title, @rep_title], :selected => @recipient),
-                         :class => "fieldset") %>
+                         :class => "fieldset",  :style => "margin-top:0px;") %>
           </div>
         </p>
 
@@ -95,7 +92,7 @@
 </div>
 
 
-<div id="lettercontainer">
+<div id="lettercontainer" >
 <p id="notice"><%= notice %></p>
  <% if @recipient_lastname != " Representative" %>
    <%= @recipient_name %><br>
