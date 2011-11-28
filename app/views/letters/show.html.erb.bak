@@ -2,7 +2,7 @@
 
 <div id="formcontainer" class="clear" style="height:auto">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
-<h3 style="margin-top:0px;margin-bottom:0px;">Your information</h3>
+<h3 style=">Your information</h3>
         <div id="letter_options">
         <%= form_tag(:method =>'put', :multipart => true) do %>
 
@@ -42,7 +42,7 @@
         </p>
 		</div>
 		
-		<h3 style="margin-top:0px;margin-bottom:0px;"> Customize your letter </h3>		
+		<h3> Customize your letter </h3>		
 		<div id="letter_options" class="clear" >
 				
         <p>
