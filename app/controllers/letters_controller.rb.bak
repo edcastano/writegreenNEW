@@ -2,14 +2,7 @@ class LettersController < ApplicationController
 
   def show
   
-  @name = params[:name]
-  @street_address = params[:street_address]
-  @city = params[:city]
-  @state = params[:state]
-  @zipcode = params[:zipcode]
-  @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
-
-  @emphasis = params[:emphasis]
+    @emphasis = params[:emphasis]
   if @emphasis != nil
       @emphasis = params[:emphasis]
 	  @political_ideology = params[:ideology]
@@ -18,8 +11,14 @@ class LettersController < ApplicationController
 	  @geography = params[:geography]
       @recipient = params[:recipient]
   else
-    @recipient = " Representative"
-  end
+    @recipient_lastname = " Representative"
+	@name = params[:name]
+	  @street_address = params[:street_address]
+	  @city = params[:city]
+	  @state = params[:state]
+	  @zipcode = params[:zipcode]
+	  @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
+    end
  
 	@congresspeople = Sunlight::Legislator.all_for(:address => @address)
 	@senior_senator = @congresspeople[:senior_senator]
