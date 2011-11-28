@@ -1,7 +1,9 @@
 Writegreenv2::Application.routes.draw do
+  root :to => "Letters#new"
   resources :sentences
   resources :letters
   match 'letter' => "Letters#show", :as => 'letter'
+  match 'home' => "Letters#new"
   #match 'new_letter' => "Letters#new"
   # The priority is based upon order of creation:
   # first created -> highest priority.

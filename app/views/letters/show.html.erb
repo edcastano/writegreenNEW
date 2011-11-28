@@ -99,27 +99,35 @@
    <%= @recipient_address %><br>
    <%= "Washington DC 20510" %><br>
  <% end %>
- <p> <%= "Dear " + @recipient_lastname + ","%></p>
- <p><%= getparagraph(@emphasis, "emphasis")%></p>
- <p><%= getparagraph(@ideologyKey, "ideology")%></p>
- <% if @geography != "Other" %>
-   <p>
-     <%= getparagraph(@geography, "geography") %>
-   </p>
- <% end %>
- <p><%= "Sincerely," %></p>
- <%= @name %><br />
- <%= @street_address %><br />
- <%= @city + ", " + @state + " " + @zipcode%><br />
+ <% if @emphasis == nil %>
+	 
+	 <div style="padding-top:47px">
+		<h3>Please customize your letter</h3>
+		<p> You can select the recipient from the list of your two state senators and your local congrational 
+		representative.</p>
+		<p> Your letter will be customized once you select from the customization options on the lower left. </p>
+		</div> 
+	 <% else %>
+		 <p> <%= "Dear " + @recipient_lastname + ","%></p>
+		 <p><%= getparagraph(@emphasis, "emphasis")%></p>
+		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
+		 <% if @geography != "Other" %>
+		   <p>
+			 <%= getparagraph(@geography, "geography") %>
+		   </p>
+		 <% end %>
+		 <p><%= "Sincerely," %></p>
+		 <%= @name %><br />
+		 <%= @street_address %><br />
+		 <%= @city + ", " + @state + " " + @zipcode%><br />
 
- <%-# @address %>
-  <h3> These are your selections</h3>
-  <%= @emphasis %>
-  <%= @political_ideology %>
-  <%= @religion %>
-  <%= @geography %>
-
-<%= link_to 'Change letter', new_letter_path %>
+		 <%-# @address %>
+		  <h3> These are your selections</h3>
+		  <%= @emphasis %>
+		  <%= @political_ideology %>
+		  <%= @religion %>
+		  <%= @geography %>
+		  <% end %>
 
 </div>
 
