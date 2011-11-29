@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'heroku'
-
 gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
@@ -33,9 +31,16 @@ gem 'json'
 # gem 'capistrano'
 
 # To use debugger
- gem 'ruby-debug19', :require => 'ruby-debug'
+ #gem 'ruby-debug19', :require => 'ruby-debug'
+ #group :development, :test do 
+ #      if RUBY_VERSION =~ /1.9/ 
+  #       gem 'ruby-debug19' 
+   #    else 
+    #     gem 'ruby-debug' 
+     #  end 
+   #end
 
-group :test do
+#group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
-end
+ # gem 'turn', :require => false
+#end
