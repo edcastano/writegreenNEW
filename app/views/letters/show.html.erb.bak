@@ -2,10 +2,48 @@
 
 <div id="formcontainer" class="clear" style="height:auto">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
+<h3>Your information</h3>
+        <div id="letter_options">
+        <%= form_tag(:method =>'put', :multipart => true) do %>
 
+        <p>
+          <div class="field">
+          <%= label_tag(:name, "Name", :class => "label",  :style => "margin-top:0px;")%>
+          <%= text_field_tag(:name, @name, :class => "fieldset",  :style => "margin-top:0px;") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:street_address, "Address", :class => "label")%>
+          <%= text_field_tag(:street_address, @street_address, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:city, "City", :class => "label")%>
+          <%= text_field_tag(:city, @city, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:state, "State", :class => "label")%>
+          <%= text_field_tag(:state, @state, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="clear">
+          <%= label_tag(:zipcode, "Zipcode", :class => "label")%>
+          <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset") %>
+          </div>
+        </p>
+		</div>
 <h3> Customize your letter </h3>		
 <div id="letter_options" class="clear" >
-		<%= form_tag(:method =>'put', :multipart => true) do %>		
+				
         <p>
           <div class="field">
           <%= label_tag(:recipient, "Recipient", :class => "label",  :style => "margin-top:0px;")%>
