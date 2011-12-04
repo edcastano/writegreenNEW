@@ -1,5 +1,5 @@
 
-<div id="letter_options" style="width:300;">
+<div id="letter_options">
 <%= form_tag(letter_path, :method =>'get', :multipart => true) do %> 
 
 <p>
@@ -38,7 +38,7 @@
 </p>
   <p>
   <div class="actions">
-    <%= submit_tag("Create letter", :class => "fieldset button") %>
+    <%= submit_tag("Lookup My Reps", :class => "fieldset button") %>
   </div>
   </p>
 <% end %>

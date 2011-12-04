@@ -59,20 +59,20 @@
           ['Economic Security', 'Econ'],
           ['Health & Pollution', 'FamPollute'],
           ['American Values', 'AmericanVal'],
-          ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
+          ['Common sense', 'CommonSense']], :selected => 'FamPollute'), :class => "fieldset") %>
           </div>
         </p>
           <div class="field">
           <%= label_tag(:ideology, "Perspective", :class => "label") %>
           <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
           ['Conservative', 'Conservative'],
-          ['Moderate', 'Moderate']], :selected => @political_ideology), :class => "fieldset") %>
+          ['Moderate', 'Moderate']], :selected => "Moderate"), :class => "fieldset") %>
           </div>
 
           <div class="field">
           <%= label_tag(:religion, "Religion", :class => "label") %>
           <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
-          ['Christian', 'Christian']], :selected => @religion), :class => "fieldset") %>
+          ['Christian', 'Christian']], :selected => "Secular"), :class => "fieldset") %>
           </div>
 
           <div class="field">
@@ -120,13 +120,8 @@
 		 <%= @street_address %><br />
 		 <%= @city + ", " + @state + " " + @zipcode%><br />
 
-		 <%-# @address %>
-		  <h3> These are your selections</h3>
-		  <%= @emphasis %>
-		  <%= @political_ideology %>
-		  <%= @religion %>
-		  <%= @geography %>
-		  <% end %>
+		 
+		<% end %>
 
 </div>
 
