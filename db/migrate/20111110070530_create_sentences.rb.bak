@@ -6,6 +6,7 @@ class CreateSentences < ActiveRecord::Migration
       t.integer :order
       t.string :ideology
       t.string :geography
+
       t.timestamps
     end
   end

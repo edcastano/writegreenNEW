@@ -106,7 +106,10 @@
 		<p> Your letter will be customized once you select from the customization options on the lower left. </p>
 		</div> 
 	 <% else %>
-		 <p> <%= "Dear " + @recipient_lastname + ","%></p>
+		<% @r = 1 + rand(3) %>
+		<p> <%= "Dear " + @recipient_lastname + ","%></p>
+		 
+		<% if @r == 1 %>
 		 <p><%= getparagraph(@emphasis, "emphasis")%></p>
 		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
 		 <% if @geography != "Other" %>
@@ -114,12 +117,29 @@
 			 <%= getparagraph(@geography, "geography") %>
 		   </p>
 		 <% end %>
+		<% elsif @r == 2 %> 
+		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
+		 <p><%= getparagraph(@emphasis, "emphasis")%></p>
+		 <% if @geography != "Other" %>
+		   <p>
+			 <%= getparagraph(@geography, "geography") %>
+		   </p>
+		 <% end %>
+		<% else %> 
+		<p><%= getparagraph(@emphasis, "emphasis")%></p>
+		<% if @geography != "Other" %>
+		   <p>
+			 <%= getparagraph(@geography, "geography") %>
+		   </p>		   
+		 <% end %>
+		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
+		 <% end %>		 
+		 
 		 <p><%= "Sincerely," %></p>
 		 <%= @name %><br />
 		 <%= @street_address %><br />
 		 <%= @city + ", " + @state + " " + @zipcode%><br />
-
-		 
+			 
 		<% end %>
 
 </div>

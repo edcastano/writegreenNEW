@@ -55,24 +55,23 @@
         <p>
           <div class="field">
           <%= label_tag(:emphasis, "Emphasis", :class => "label")%>
-          <%= select_tag(:emphasis, options_for_select([['Risk/Personal Values', 'RiskValues'],
-          ['Economic Security', 'Econ'],
-          ['Health & Pollution', 'FamPollute'],
+          <%= select_tag(:emphasis, options_for_select([['Health & Pollution', 'FamPollute'],
+		  ['Risk/Personal Values', 'RiskValues'],
+          ['Economic Security', 'Econ'],          
           ['American Values', 'AmericanVal'],
-          ['Common sense', 'CommonSense']], :selected => 'FamPollute'), :class => "fieldset") %>
+          ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
           </div>
         </p>
           <div class="field">
           <%= label_tag(:ideology, "Perspective", :class => "label") %>
-          <%= select_tag(:ideology, options_for_select([['Liberal', 'Liberal'],
-          ['Conservative', 'Conservative'],
-          ['Moderate', 'Moderate']], :selected => "Moderate"), :class => "fieldset") %>
+          <%= select_tag(:ideology, options_for_select([['Moderate', 'Moderate'], ['Liberal', 'Liberal'],
+          ['Conservative', 'Conservative']], :selected => @political_ideology), :class => "fieldset") %>
           </div>
 
           <div class="field">
           <%= label_tag(:religion, "Religion", :class => "label") %>
           <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
-          ['Christian', 'Christian']], :selected => "Secular"), :class => "fieldset") %>
+          ['Christian', 'Christian']], :selected => @religion), :class => "fieldset") %>
           </div>
 
           <div class="field">

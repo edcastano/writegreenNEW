@@ -3,7 +3,7 @@ module LettersHelper
 
 
 
-def set(focus)
+def set(focus, focus_header)
 content_array = Sentence.where(focus_header.to_sym => focus)
 @num_sentences = content_array.maximum("order")
 end 
@@ -19,7 +19,7 @@ return sentence.content
 end
 
 def getparagraph(focus, focus_header)
-max = set(focus)
+max = set(focus, focus_header)
 counter = 1
 text = ''
   while counter <= max 

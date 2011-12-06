@@ -9,7 +9,6 @@ content_array = Sentence.where(focus_header.to_sym => focus)
 end 
 
 def entry(focus, sequence, focus_header)
-d = "ideology"
 sent_array = Sentence.where(
   focus_header.to_sym => focus,
   :order	=> sequence
