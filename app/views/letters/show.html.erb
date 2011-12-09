@@ -107,39 +107,60 @@
 		</div> 
 	 <% else %>
 		<% @r = 1 + rand(3) %>
-		<p> <%= "Dear " + @recipient_lastname + ","%></p>
+		<p> <%= getcontent('Greeting', 'component') + @recipient_lastname + ","%></p>
 		 
+		  <!--Body of letter. Alternates between 3 random structures -->
 		<% if @r == 1 %>
-		 <p><%= getparagraph(@emphasis, "emphasis")%></p>
-		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
+		 <p><%= getcontent('Intro', 'component') + "  " + getcontent(@emphasis, "emphasis")%></p>
+		 <p><%= getcontent(@ideologyKey, "ideology")%></p>
 		 <% if @geography != "Other" %>
-		   <p>
-			 <%= getparagraph(@geography, "geography") %>
-		   </p>
+		   <p><%= getcontent(@geography, "geography") %></p>
 		 <% end %>
 		<% elsif @r == 2 %> 
-		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
-		 <p><%= getparagraph(@emphasis, "emphasis")%></p>
+		 <p><%= getcontent('Intro', 'component') + "  " + getcontent(@ideologyKey, "ideology")%></p>
+		 <p><%= getcontent(@emphasis, "emphasis")%></p>
 		 <% if @geography != "Other" %>
-		   <p>
-			 <%= getparagraph(@geography, "geography") %>
-		   </p>
+		   <p><%= getcontent(@geography, "geography") %></p>
 		 <% end %>
 		<% else %> 
-		<p><%= getparagraph(@emphasis, "emphasis")%></p>
+		<p><%= getcontent('Intro', 'component') + "  " + getcontent(@emphasis, "emphasis")%></p>
 		<% if @geography != "Other" %>
-		   <p>
-			 <%= getparagraph(@geography, "geography") %>
-		   </p>		   
+		   <p><%= getcontent(@geography, "geography") %></p>		   
 		 <% end %>
-		 <p><%= getparagraph(@ideologyKey, "ideology")%></p>
+		 <p><%= getcontent(@ideologyKey, "ideology")%></p>
 		 <% end %>		 
+		 <!-- End letter body -->
 		 
-		 <p><%= "Sincerely," %></p>
+		 <!-- Beging letter closing -->
+		 <% @c = 1 + rand(2) %> 
+		 <% if @c == 1 %>
+		 <p><%= getcontent('WrapupOptionA', 'component') %></p>
+		 <p><%= getcontent('Closing', 'component') %></p>
 		 <%= @name %><br />
 		 <%= @street_address %><br />
 		 <%= @city + ", " + @state + " " + @zipcode%><br />
-			 
+     <% else %>
+     		 <% @v = 1 + rand(3) %>
+		     <% if @v == 1 %>
+		         <p><%= getcontent('WrapupOptionA', 'component') + "  "+ getcontent('WrapupOptionB', 'component') + ":"%></p>
+		         <%= @name %><br />
+		         <%= @street_address %><br />
+		         <%= @city + ", " + @state + " " + @zipcode%><br />
+             <p><%= getcontent('Closing', 'component') %></p>  
+             <%= @name %><br />
+         <% else %>
+             <p><%= getcontent('WrapupOptionB', 'component') + ":" %></p>
+		         <%= @name %><br />
+		         <%= @street_address %><br />
+		         <%= @city + ", " + @state + " " + @zipcode%><br />
+             <p><%= getcontent('WrapupOptionA', 'component') %></p>
+             <p><%= getcontent('Closing', 'component') %></p>  
+             <%= @name %><br />
+         <% end %>
+     <% end %>
+		 
+		 <!-- End letter closing -->
+		 
 		<% end %>
 
 </div>

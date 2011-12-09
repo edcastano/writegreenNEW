@@ -1,10 +1,11 @@
 require './config/environment'
 require 'csv'
 
-CSV.foreach('c:\sites\writegreenv3\components.csv') do |row|
+CSV.foreach('/home/dukefungi/sites/writegreenv3/components.csv') do |row|
 	record = Sentence.new(
 	:component => row[0],	
-	:content => row[1]
+	:content => row[1],
+	:order => 1
 	)
     record.save!
 end	

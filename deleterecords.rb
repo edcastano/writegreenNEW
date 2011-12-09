@@ -1,9 +1,9 @@
 require './config/environment'
 
-id = 1225
-while id != 1356
-s = Sentence.find(id)
-s.destroy
+id = 1356
+while id != 1487
+s = Sentence.find_by_id(id)
+if s != nil then s.destroy end
 id += 1
 end
 
