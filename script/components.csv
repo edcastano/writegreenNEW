@@ -1,16 +1,16 @@
 Greeting,Dear  
 Greeting,Hello  
 Greeting,Hi 
-Greeting,
-Greeting,
-Greeting,
-Greeting,
-Greeting,
-Greeting,
-Greeting,
-Greeting,
-Greeting,
-Greeting,
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
+Greeting,""
 Intro ,I hope this letter finds you well.
 Intro ,Thank you for taking the time to read this letter.
 Intro ,Thank you for your consideration.
@@ -107,12 +107,12 @@ WrapupOptionB,I can be reached at this address
 WrapupOptionB,You can write to me at 
 WrapupOptionB,You can reach me here 
 WrapupOptionB,I can be reached here 
-WrapupOptionB,You'll find my address below:
-WrapupOptionB,You'll find my address here:
-WrapupOptionB,I've provided my address below for your convenience.
-WrapupOptionB,You'll see my address below.
-WrapupOptionB,See my address below.
-WrapupOptionB,My address is below.
+WrapupOptionB,You'll find my address below
+WrapupOptionB,You'll find my address here
+WrapupOptionB,I've provided my address below for your convenience
+WrapupOptionB,You'll see my address below
+WrapupOptionB,See my address below
+WrapupOptionB,My address is below
 Closing,"Best,"
 Closing,"Thank you,"
 Closing,"Thanks,"

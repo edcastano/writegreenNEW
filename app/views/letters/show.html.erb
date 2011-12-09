@@ -56,8 +56,10 @@
           <div class="field">
           <%= label_tag(:emphasis, "Emphasis", :class => "label")%>
           <%= select_tag(:emphasis, options_for_select([['Health & Pollution', 'FamPollute'],
-		  ['Risk/Personal Values', 'RiskValues'],
-          ['Economic Security', 'Econ'],          
+		      ['Risk/Personal Values', 'RiskValues'],
+          ['Health & Economy', 'HealthEcon'],
+          ['National Security', 'NationalSec'],
+          ['Economic Growth', 'EconGrowth'],          
           ['American Values', 'AmericanVal'],
           ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
           </div>
