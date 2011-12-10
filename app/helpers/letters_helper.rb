@@ -3,12 +3,13 @@ module LettersHelper
 # Pulls a random "content stub" from the database givent the selection
   # 'Focus_header' variable is the title of the user selection (e.g. emphasis, ideology, content).
   # The 'Focus' variable is a variable for the specific user selection.  
-def getcontent(focus, focus_header)
+
+def get_content(focus, focus_header)
 max = count_variations(focus, focus_header) 
 counter = 1
 text = ''
   while counter <= max
-	text += ' ' + entry(focus, counter, focus_header)
+	text += ' ' + pull_entry(focus, counter, focus_header)
 	counter += 1	
   end   
   return text
@@ -20,16 +21,90 @@ content_array = Sentence.where(focus_header.to_sym => focus)
 content_array.maximum("order")
 end 
 
-# Pulls a random entry from the options available given the parameters
-def entry(focus, sequence, focus_header)
-sent_array = Sentence.where(
+# Pulls a random pull_entry from the options available given the parameters
+def pull_entry(focus, sequence, focus_header)
+entry_array = Sentence.where(
   focus_header.to_sym => focus,
   :order	=> sequence
   )
-sentence = sent_array[rand(sent_array.length)]
+sentence = entry_array[rand(entry_array.length)]
 return sentence.content
 end
 
+#Letter builders
+
+#Polutes the rep's address
+def rep_address
+"\n" + @recipient_name.strip + "\n" + @recipient_address + 
+"\n" + "Washington DC 20510" + "\n"   
+end
+
+def greeting
+greeting = "\n" + get_content('Greeting', 'component') + @recipient_lastname + ","
+end
+
+#Populates the paragraph, 'a', 'b' & 'c' are the order of each paragraph
+def body
+
+  @r = rand(3)
+ if @r == 1 
+  "\n\n" + get_content('Intro', 'component') + " " + 
+  get_content(@emphasis, "emphasis") + "\n\n" +
+  get_content(@ideologyKey, "ideology")  + "\n\n" +
+  if @geography != "Other" 
+  get_content(@geography, "geography") 
+  end 
+ elsif @r == 2  
+  "\n\n" + get_content('Intro', 'component') + " " +
+  get_content(@ideologyKey, "ideology") +
+  "\n\n" + get_content(@emphasis, "emphasis") +
+	if @geography != "Other" 
+	"\n\n" + get_content(@geography, "geography") 
+	end 
+ else  
+	 "\n\n" + get_content('Intro', 'component') + " " +
+	 get_content(@emphasis, "emphasis") +
+	 if @geography != "Other" 
+	 "\n\n" + get_content(@geography, "geography") 		   
+	 end +
+	 "\n\n" + get_content(@ideologyKey, "ideology")
+ end 	
+end
+
+def closing   
+  @c = rand(2)
+	if @c == 1 
+	"\n\n" + get_content('WrapupOptionA', 'component') + "\n\n" +
+	get_content('Closing', 'component') + "\n" +
+	writer_address
+  else 
+    @v = rand(2) 
+	  if @v == 1 
+	  "\n\n" + get_content('WrapupOptionA', 'component') + "  " +
+		get_content('WrapupOptionB', 'component') + ":" + "\n" +
+		writer_address + "\n\n" +
+		get_content('Closing', 'component') + "\n\n" +
+    @name
+    else 
+    "\n\n" + get_content('WrapupOptionB', 'component') + ":" + "\n" +
+		writer_address +
+		get_content('WrapupOptionA', 'component') + "\n" +
+    get_content('Closing', 'component')
+    end 
+  end 
+end
+
+def writer_address
+  writer_address = "\n" +
+  @name + "\n" +
+  @street_address + "\n" +
+	@city + ", " + @state + " " + @zipcode  
+end
+ 
+def letter
+letter = rep_address + greeting + body + closing
+letter
+end
 
 
 end

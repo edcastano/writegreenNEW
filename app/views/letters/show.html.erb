@@ -1,5 +1,4 @@
 
-
 <div id="formcontainer" class="clear" style="height:auto">
 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>
 <h3>Your information</h3>
@@ -80,7 +79,7 @@
           <%= label_tag(:geography, "Geography", :class => "label") %>
           <%= select_tag(:geography, options_for_select([['California', 'California'],
           ['Other', 'Other']], :selected => @geography), :class => "fieldset") %>
-          </div>
+          </div> 
           <p>
           <div class="actions">
             <%= submit_tag("Create letter", :class => "fieldset button") %>
@@ -91,83 +90,25 @@
 	
 </div>
 
-
-<div id="lettercontainer" >
-<p id="notice"><%= notice %></p>
- <% if @recipient_lastname != " Representative" %>
-   <%= @recipient_name %><br>
-   <%= @recipient_address %><br>
-   <%= "Washington DC 20510" %><br>
- <% end %>
  <% if @emphasis == nil %>
 	 
-	 <div style="padding-top:47px">
-		<h3>Please customize your letter</h3>
-		<p> You can select the recipient from the list of your two state senators and your local congrational 
+  <div id="lettercontainer">
+   <div style="padding-top:47px">
+   <h3>Please customize your letter</h3>
+   <p> You can select the recipient from the list of your two state senators and
+    your local congrational 
 		representative.</p>
-		<p> Your letter will be customized once you select from the customization options on the lower left. </p>
-		</div> 
-	 <% else %>
-		<% @r = 1 + rand(3) %>
-		<p> <%= getcontent('Greeting', 'component') + @recipient_lastname + ","%></p>
-		 
-		  <!--Body of letter. Alternates between 3 random structures -->
-		<% if @r == 1 %>
-		 <p><%= getcontent('Intro', 'component') + "  " + getcontent(@emphasis, "emphasis")%></p>
-		 <p><%= getcontent(@ideologyKey, "ideology")%></p>
-		 <% if @geography != "Other" %>
-		   <p><%= getcontent(@geography, "geography") %></p>
-		 <% end %>
-		<% elsif @r == 2 %> 
-		 <p><%= getcontent('Intro', 'component') + "  " + getcontent(@ideologyKey, "ideology")%></p>
-		 <p><%= getcontent(@emphasis, "emphasis")%></p>
-		 <% if @geography != "Other" %>
-		   <p><%= getcontent(@geography, "geography") %></p>
-		 <% end %>
-		<% else %> 
-		<p><%= getcontent('Intro', 'component') + "  " + getcontent(@emphasis, "emphasis")%></p>
-		<% if @geography != "Other" %>
-		   <p><%= getcontent(@geography, "geography") %></p>		   
-		 <% end %>
-		 <p><%= getcontent(@ideologyKey, "ideology")%></p>
-		 <% end %>		 
-		 <!-- End letter body -->
-		 
-		 <!-- Beging letter closing -->
-		 <% @c = 1 + rand(2) %> 
-		 <% if @c == 1 %>
-		 <p><%= getcontent('WrapupOptionA', 'component') %></p>
-		 <p><%= getcontent('Closing', 'component') %></p>
-		 <%= @name %><br />
-		 <%= @street_address %><br />
-		 <%= @city + ", " + @state + " " + @zipcode%><br />
-     <% else %>
-     		 <% @v = 1 + rand(3) %>
-		     <% if @v == 1 %>
-		         <p><%= getcontent('WrapupOptionA', 'component') + "  "+ getcontent('WrapupOptionB', 'component') + ":"%></p>
-		         <%= @name %><br />
-		         <%= @street_address %><br />
-		         <%= @city + ", " + @state + " " + @zipcode%><br />
-             <p><%= getcontent('Closing', 'component') %></p>  
-             <%= @name %><br />
-         <% else %>
-             <p><%= getcontent('WrapupOptionB', 'component') + ":" %></p>
-		         <%= @name %><br />
-		         <%= @street_address %><br />
-		         <%= @city + ", " + @state + " " + @zipcode%><br />
-             <p><%= getcontent('WrapupOptionA', 'component') %></p>
-             <p><%= getcontent('Closing', 'component') %></p>  
-             <%= @name %><br />
-         <% end %>
-     <% end %>
-		 
-		 <!-- End letter closing -->
-		 
-		<% end %>
-
-</div>
+		<p> Your letter will be customized once you select from the customization 
+		options on the lower left. </p>
+		</div>
+		</div>
+		<% else %>		
+  <textarea id="lettercontainer" >
+      <%= letter %>     	
+  </textarea>    
+    <% end %>
 
 
 
- 
+
 

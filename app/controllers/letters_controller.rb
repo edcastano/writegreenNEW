@@ -1,5 +1,7 @@
 class LettersController < ApplicationController
 
+  
+  
   def show
   
   @name = params[:name]
@@ -11,14 +13,14 @@ class LettersController < ApplicationController
 
   @emphasis = params[:emphasis]
   if @emphasis != nil
-      @emphasis = params[:emphasis]
+    @emphasis = params[:emphasis]
 	  @political_ideology = params[:ideology]
 	  @religion = params[:religion]
 	  @ideologyKey = @political_ideology + @religion
 	  @geography = params[:geography]
-      @recipient = params[:recipient]
+    @recipient = params[:recipient]
   else
-    @recipient_lastname = " Representative"
+    @recipient_lastname = " not_selected"
   end
  
 	@congresspeople = Sunlight::Legislator.all_for(:address => @address)

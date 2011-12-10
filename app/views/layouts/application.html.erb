@@ -3,8 +3,17 @@
 <head>
   <title>Writegreen - Empowering Environmental Engagement</title>
   <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "mipskin" %>
+  <%= stylesheet_link_tag    "mipdefault" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.markitup.js" %>
+  <%= javascript_include_tag "set.js" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="markitup/jquery.markitup.js"></script>  
+  <script type="text/javascript" src="markitup/sets/default/set.js"></script>
+ 
+
 </head>
 <body>
 
@@ -12,11 +21,15 @@
 <div class="clear">
 <%if Rails.env.development? %>
 <%= debug(params) %>
- <h3> These are your selections</h3>
-		  <%= @emphasis %>
-		  <%= @political_ideology %>
-		  <%= @religion %>
-		  <%= @geography %>
+ <h3> These are your selections</h3><br>
+		  <%= @emphasis %><br>
+		  <%= @political_ideology %><br>
+		  <%= @religion %><br>
+		  <%= @geography %><br>
+ <h3> Content variations </h3><br>		  
+   <%= "Body content is #{@r}" %><br>
+   <%= "Closing content is #{@c}.#{@v}" %><br>
+   
 <% end %>
 </div>
 </body>

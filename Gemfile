@@ -27,6 +27,7 @@ gem 'sunlight'
 gem 'ym4r'
 gem 'json'
 gem 'therubyracer'
+gem "markitup"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
