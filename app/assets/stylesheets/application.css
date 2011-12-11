@@ -1,7 +1,7 @@
 /*body {
   background-color: #8EC15B;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: 1.2em;
 }*/
 
 body {font-family: Helvetica, Verdana, Arial, sans-serif; 
@@ -9,7 +9,9 @@ body {font-family: Helvetica, Verdana, Arial, sans-serif;
   background-color: #8EC15B;
   /*text-align: left; */
   /*color: #666; */
-  font-size:16px;}
+  font-size:1em;
+  height: 100%; 
+  }
 
 a {
   color: #333;
@@ -53,11 +55,12 @@ h3 {
    box-shadow: rgba(0,0,0,1) 0 1px 0;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: #0f1f0e;
-   font-size: 17px;
+   font-size: 1em;
    font-family: Georgia, Serif;
    font-style: bold; 
    text-decoration: none;
-   vertical-align: middle;      
+   vertical-align: middle; 
+   clear: both;     
    }
 .button:hover {
    border-top-color: #8ec15b;
@@ -115,13 +118,13 @@ h3 {
 
 #lettercontainer {
   width: 600px;
-  height: 594px;
+  height: 670px;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
   border: solid 2px black;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
   border-radius: 15px;
   float: left;
   overflow:auto;
@@ -129,11 +132,11 @@ h3 {
 
 #formcontainer {
   width: auto;
-  height: auto;
+  height: 670px;
   float: left;
   margin:20px;
   background-color: #FFF;
-  padding: 10px 30px;
+  padding: 20px 30px;
   border: solid 2px black;
   margin-top: 20px;
   border-radius: 15px;

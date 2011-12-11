@@ -87,9 +87,10 @@ def closing
     @name
     else 
     "\n\n" + get_content('WrapupOptionB', 'component') + ":" + "\n" +
-		writer_address +
+		writer_address + "\n\n" +
 		get_content('WrapupOptionA', 'component') + "\n" +
-    get_content('Closing', 'component')
+    get_content('Closing', 'component') + "\n" +
+    @name
     end 
   end 
 end
