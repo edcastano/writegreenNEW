@@ -18,19 +18,6 @@
 <body>
 
 <%= yield %>
-<div class="clear">
-<%if Rails.env.development? %>
-<%= debug(params) %>
- <h3> These are your selections</h3><br>
-		  <%= @emphasis %><br>
-		  <%= @political_ideology %><br>
-		  <%= @religion %><br>
-		  <%= @geography %><br>
-<br> <h3> Content variation </h3>
-   <%= "Body content is #{@r}" %><br>
-   <%= "Closing content is #{@c}.#{@v}" %><br>
-   
-<% end %>
-</div>
+
 </body>
 </html>
