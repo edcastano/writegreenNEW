@@ -40,7 +40,7 @@ def rep_address
 end
 
 def greeting
-greeting = "\n" + get_content('Greeting', 'component') + @recipient_lastname + ","
+"\n" + get_content('Greeting', 'component') + @recipient_lastname + ","
 end
 
 #Populates the paragraph, 'a', 'b' & 'c' are the order of each paragraph
@@ -96,16 +96,14 @@ def closing
 end
 
 def writer_address
-  writer_address = "\n" +
+  "\n" +
   @name + "\n" +
   @street_address + "\n" +
 	@city + ", " + @state + " " + @zipcode  
 end
  
 def letter
-letter = rep_address + greeting + body + closing
-letter
+rep_address + greeting + body + closing
 end
-
 
 end

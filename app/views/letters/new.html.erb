@@ -1,17 +1,12 @@
 
 
-   <!-- Begin Wrapper -->
-   <div id="wrapper">
    
-     <!-- Begin Header -->
-     <div id="header">		 
-		 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>			   
-  	 </div>
-		 <!-- End Header -->
-		 
+       <!-- Used to set the CSS formating for the step banners -->
+  		 <% @step = 1 %>
+  		   		 
 		 <!-- Begin Left Column -->
 		 <div id="leftcolumn">
-		 <h3>Your information</h3>
+		 <h3 style="margin-left: 10px">Your information</h3>
      <%= render 'form' %>
      </div>
 		 
@@ -30,36 +25,8 @@
 		 </div>
 		 <!-- End Right Column -->
 		 
-		 <!-- Begin Footer -->
-		 <div id="footer">
-		       
-			   <div id="steps" class="center">
-			   <h2 style="text-align:center"> Enter Info </h2>
-			   </div>		
-			   <div id="steps" class="center">
-			   <h2 style="text-align:center"> Personalize Letter </h2>
-			   </div>
-			   <div id="steps" class="center">
-			   <h2 style="text-align:center" > Edit & Print </h2>
-			   </div>
-			    
-	     </div>
-		 <!-- End Footer -->
-		 <div class="clear">
-    <%if Rails.env.development? %>
-    <%= debug(params) %>
-     <h3> These are your selections</h3><br>
-		  <%= @emphasis %><br>
-		  <%= @political_ideology %><br>
-		  <%= @religion %><br>
-		  <%= @geography %><br>
-    <br> <h3> Content variation </h3>
-     <%= "Body content is #{@r}" %><br>
-     <%= "Closing content is #{@c}.#{@v}" %><br>   
-    <% end %>
-    </div>
-   </div>
-   <!-- End Wrapper -->
+		
+		
    
 
 

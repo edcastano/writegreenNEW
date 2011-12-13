@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag    "mipskin" %>
   <%= stylesheet_link_tag    "mipdefault" %>
+  <%= stylesheet_link_tag "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "jquery.markitup.js" %>
   <%= javascript_include_tag "set.js" %>
@@ -16,8 +17,79 @@
 
 </head>
 <body>
-
+<!-- Begin Wrapper -->
+   <div id="wrapper">
+   <!-- Begin Header -->
+     <div id="header">		 
+		 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>			   
+  	 </div>
+		 <!-- End Header -->
 <%= yield %>
-
+<!-- Begin Footer -->
+		 <% if @step == 1 %>
+		 <div id=	"footer">
+		       
+			   <div class="steps" class="center" style="background: #006600;">
+			   <h2 style="text-align:center"> Enter Info </h2>
+			   </div>		
+			   <div class="steps" class="center">
+			   <h2 style="text-align:center"> Personalize Letter </h2>
+			   </div>
+			   <div class="steps" class="center">
+			   <h2 style="text-align:center" > Edit & Print </h2>
+			   </div>
+			    
+	     </div>
+	     
+	     <% elsif @step == 2 %>
+		 <div id=	"footer">
+		       
+			   <div class="steps" class="center">
+			   <h2 style="text-align:center"> Enter Info </h2>
+			   </div>		
+			   <div class="steps" class="center"style="background: #006600;">
+			   <h2 style="text-align:center"> Personalize Letter </h2>
+			   </div>
+			   <div class="steps" class="center">
+			   <h2 style="text-align:center" > Edit & Print </h2>
+			   </div>
+			    
+	     </div>     
+	          
+	   <% else %>
+		 <div id=	"footer">
+		       
+			   <div class="steps" class="center">
+			   <h2 style="text-align:center"> Enter Info </h2>
+			   </div>		
+			   <div class="steps" class="center">
+			   <h2 style="text-align:center"> Personalize Letter </h2>
+			   </div>
+			   <div class="steps" class="center" style="background: #006600;">
+			   <h2 style="text-align:center" > Edit & Print </h2>
+			   </div>
+			    
+	     </div>
+	     
+	     <% end %>	     
+	     
+		 <!-- End Footer -->
+		 
+   </div>
+   <!-- End Wrapper -->
+		  <div class="clear">
+    <%if Rails.env.development? %>
+    <%= debug(params) %>
+     <h3> These are your selections</h3><br>
+		  <%= @emphasis %><br>
+		  <%= @political_ideology %><br>
+		  <%= @religion %><br>
+		  <%= @geography %><br>
+    <br> <h3> Content variation </h3>
+     <%= "Body content is #{@r}" %><br>
+     <%= "Closing content is #{@c}.#{@v}" %><br>   
+     <%= "We are on step #{@step}." %><br>
+    <% end %>
+    </div>
 </body>
 </html>

@@ -1,29 +1,13 @@
 
-
- 
-	 
-  <div id="lettercontainer" >
-   <div style="padding-top:47px">
-  
-
- <!-- Begin Wrapper -->
-   <div id="wrapper">
-   
-         <!-- Begin Header -->
-         <div id="header">
-		 
-		        <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>	 
-			   
-		 </div>
-		 <!-- End Header -->
-		 
+      
+              		 
 		 <!-- Begin Left Column -->
 		 <div id="leftcolumn">
 		 
 		     
         <h3 style="margin-left: 10px">Your information</h3>
         <div id="letter_options">
-        <%= form_tag(:method =>'put', :multipart => true) do %>
+        <%= form_tag(edit_path, :method =>'get', :multipart => true) do %>       
 
         <p>
           <div class="field">
@@ -126,30 +110,13 @@
 		 <% else %>		
     
     <textarea id="rightcolumn">
-      <%= letter %>     	
+      <%= letter %>   
     </textarea>        
      <% end %>	 
 		 
 		 <!-- End Right Column -->
 		 
-		 <!-- Begin Footer -->
-		 <div id=	"footer">
-		       
-			   <div id="steps" class="center">
-			   <h2 style="text-align:center"> Enter Info </h2>
-			   </div>		
-			   <div id="steps" class="center">
-			   <h2 style="text-align:center"> Personalize Letter </h2>
-			   </div>
-			   <div id="steps" class="center">
-			   <h2 style="text-align:center" > Edit & Print </h2>
-			   </div>
-			    
-	     </div>
-		 <!-- End Footer -->
-		 
-   </div>
-   <!-- End Wrapper -->
+
 
 
 
