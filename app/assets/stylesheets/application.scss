@@ -1,9 +1,3 @@
-@mixin selectstep {
-
-}
-
-
-
 * { padding: 0; margin: 0; }
 
 body {
@@ -71,12 +65,35 @@ body {
  height: 20px;
  clear: none;
  float: left;
- color: #FFFFFF; 
+ color: #eeeeee; 
  border: 2px solid #ccc;
- background: #8EC15B;
+ background: #A6D785;
  margin: 12px 5px 12px 5px;
  padding: 20px 20px 20px 20px;
- border-radius:10px; 
+ border-radius:10px;   
+ &.instructions { 
+  width: 300px;
+  height: 40px;
+  color: #000000; 
+  background: #ffffff;
+  padding: 10px 10px 10px 10px; 
+  font-size: 16px;
+  text-align: center; 
+  clear: none; 
+ }
+ &.selected {
+  background: #006600;
+  color:#ffffff;
+ }
+}
+
+.highlightstep {
+ border: 4px solid #66CD00;
+ border-radius:10px;   
+ height: 75px;
+ width: 651px;
+ padding: 0px;
+ clear:both;
 }
 
 
@@ -151,14 +168,15 @@ margin-right:auto;
    vertical-align: middle; 
    clear: both;  
    width: 202px;   
-   }
-.button:hover {
-   border-top-color: #8ec15b;
-   background: #8ec15b;
-   color: #ffffff;
-   }
-.button:active {
-   border-top-color: #c8edbd;
-   background: #c8edbd;
-   }
+  
+    :hover {
+     border-top-color: #8ec15b;
+     background: #8ec15b;
+     color: #ffffff;
+     }
+    :active {
+     border-top-color: #c8edbd;
+     background: #c8edbd;
+     }
+}
 

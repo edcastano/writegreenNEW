@@ -5,7 +5,7 @@
 		 <div id="leftcolumn">
 		 
 		     
-        <h3 style="margin-left: 10px">Your information</h3>
+        <h3 style="margin-left: 20px">1) Enter your information</h3>
         <div id="letter_options">
         <%= form_tag(edit_path, :method =>'get', :multipart => true) do %>       
 
@@ -45,7 +45,7 @@
         </p>
 		</div>
 		 
-		 <h3 style="margin-left: 10px"> Customize your letter </h3>		
+		 <h3 style="margin-left: 20px"> Customize your letter </h3>		
     <div id="letter_options" class="clear" >
 				
         <p>
@@ -100,13 +100,36 @@
 		 <!-- Begin Right Column -->
       <% if @emphasis == nil %>
 		  <div id="rightcolumn" style="background-color:#EEEEEE;">     
-		  <h3>Please customize your letter</h3>
-      <p> You can select the recipient from the list of your two state senators and
-      your local congrational 
-		  representative.</p>
-		  <p> Your letter will be customized once you select from the customization 
-		  options on the lower left. </p>
-		  </div>      
+		      <h3>WriteGreen is like having your own personal writing coach.</h3>
+   			
+   			 <div class="steps" style="margin: 5px 5px 15px 5px">
+	  		   <h2 style="text-align:left"> 1) Enter your info </h2>
+         </div>  			  
+
+      	<div class="steps instructions" style="margin: 5px 5px 15px 5px"> 
+      	Your info will be used to match you with your congressional representatives.       	    	
+      	</div>
+      	
+      	<div class="highlightstep">
+      	 <div class="steps selected" style="margin: 5px 5px 15px 5px">
+	  		   <h2 style="text-align:left"> 2) Customize your letter  </h2>
+         </div>   			  
+
+      	<div class="steps instructions" style="margin: 5px 5px 15px 5px"> 
+      	Select from the options for recipient, emphasis, perspective, etc.       	    	
+      	</div>
+      	 </div> 
+      	
+      	<div class="steps" style="margin: 5px 5px 15px 5px">
+	  		   <h2 style="text-align:left"> 3) Edit your letter </h2>
+         </div>  			  
+
+      	<div class="steps instructions" style="margin: 5px 5px 15px 5px"> 
+      	WriteGreen helps you get started, but the real power is in telling your unique story.       	    	
+         </div>  
+        </div>
+		  
+		     
 		 <% else %>		
     
     <textarea id="rightcolumn">
