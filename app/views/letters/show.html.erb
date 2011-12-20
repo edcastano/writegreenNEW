@@ -5,7 +5,7 @@
 		 <div id="leftcolumn">
 		 
 		     
-        <h3 style="margin-left: 20px">Enter your information</h3>
+        <h3 class="options unselect">1) Enter your information</h3>
         <div id="letter_options">
         <%= form_tag(edit_path, :method =>'get', :multipart => true) do %>       
 
@@ -45,7 +45,7 @@
         </p>
 		</div>
 		 
-		 <h3 style="margin-left: 20px">Customize your letter </h3>		
+		 <h3 class="options select">2) Customize your letter </h3>		
     <div id="letter_options" class="clear" >
 				
         <p>
@@ -89,7 +89,7 @@
          
         </div>
 		  <div class="actions">
-            <%= submit_tag("Create letter", :class => "button fieldset") %>
+            <%= submit_tag("3) Edit Letter", :class => "button fieldset") %>
           </div>
           </p>
         <% end %>
@@ -103,9 +103,10 @@
    	    <h2>WriteGreen makes it easy to write about climate change.</h2>
   	    <h3>Your representatives will take notice.</h3>
 
+     		<div class="spacer">
    			<div class="stepborder unhighlighted">
    			 <div class="steps" style="margin: 5px 5px 15px 5px">
-	  		   <h2 style="text-align:left"> 1) Enter your info </h2>
+	  		   <h2 style="text-align:left"> 1) Enter your information </h2>
          </div>         			  
 
       
@@ -133,6 +134,7 @@
       	WriteGreen helps you get started, but the real power is in telling your unique story.       	    	
       	</div>
       	</div> 
+        </div>
         </div>
 		  
 		     

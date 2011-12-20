@@ -4,7 +4,7 @@
 		 <div id="leftcolumn">
 		 
 		     
-        <h3 style="margin-left: 20px">Your information</h3>
+        <h3 class="options unselect">1) Enter your information</h3>
         <div id="letter_options">
          <%= form_tag(:method =>'put', :multipart => true) do %> 
 
@@ -44,7 +44,7 @@
         </p>
 		</div>
 		 
-		 <h3 style="margin-left: 20px"> Customize your letter </h3>		
+		 <h3 class="options unselect">2) Customize your letter </h3>		
     <div id="letter_options" class="clear" >
 				
         <p>
@@ -88,7 +88,7 @@
          <p>
         </div>
 		  <div class="actions">
-            <%= submit_tag("Update letter", :class => "button fieldset") %>
+            <%= submit_tag("Update Letter", :class => "button fieldset") %>
           </div>
           </p>
                     
