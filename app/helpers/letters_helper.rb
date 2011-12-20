@@ -28,12 +28,12 @@ end
 
 #Polutes the rep's address
 def rep_address
-"\n" + @recipient_name.strip + "\n" + @recipient_address + 
+"\n" + @recipient_name + "\n" + @recipient_address + 
 "\n" + "Washington DC 20510" + "\n"   
 end
 
 def greeting
-"\n" + get_content('Greeting', 'component') + @recipient_lastname + ","
+"\n" + @recipient_lastname + ","
 end
 
 #Populates the paragraph, 'a', 'b' & 'c' are the order of each paragraph

@@ -38,7 +38,7 @@ body {
  color: #333;
  width: 931px;
  float: left;
- padding: 10px;
+ padding: 0px 10px 8px 10px;
  border: 2px solid #ccc;
  height: 100px;
  margin: 20px 2.5px 2.5px 2.5px;
@@ -69,13 +69,13 @@ body {
  border-radius:10px;
 }
 #footer { 
- width: 951px;
- height: 90px;
+ width: 950px;
+ height: 73px;
  clear: both;
  color: #333;
  border: 2px solid #ccc;
  background: #FFFFFF;
- margin: 2.5px auto 50px auto;
+ margin: 2.5px 2px 50px 2px;
  padding: 0px;
  border-radius:10px;
  float: left;
@@ -83,9 +83,9 @@ body {
 
 #final_instruct {
  border-radius:10px;   
- height: 47px;
- width: 699px;
- padding: 18px 10px 10px 0px;
+ height: 30px;
+ width: 698px;
+ padding: 10px 10px 18px 0px;
  margin: 0px;
  clear:none; 
  border: 8px solid #006600;
@@ -105,8 +105,8 @@ body {
  float: left;
  color: #eeeeee; 
  border: 2px solid #ccc;
- background: #A6D785;
- margin: 12px 5px 12px 5px;
+ background: #A6D785; 
+ margin: 5px 5px 15px 5px;
  padding: 20px 20px 20px 20px;
  border-radius:10px;   
  &.instructions { 
