@@ -101,21 +101,11 @@
 		 <!-- End Left Column -->
 		 
 		 <!-- Begin Right Column -->
-      <% if @emphasis == nil %>
-		  <div id="rightcolumn" style="background-color:#EEEEEE;">     
-		  <h3>Please customize your letter</h3>
-      <p> You can select the recipient from the list of your two state senators and
-      your local congrational 
-		  representative.</p>
-		  <p> Your letter will be customized once you select from the customization 
-		  options on the lower left. </p>
-		  </div>      
-		 <% else %>		
-    
+          
     <textarea id="rightcolumn">
       <%= letter %>   
     </textarea>        
-     <% end %>	 
+    
 		 
 		 <!-- End Right Column -->
 		 

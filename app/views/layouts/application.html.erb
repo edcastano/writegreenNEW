@@ -6,14 +6,19 @@
   <%= stylesheet_link_tag "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  
+  <script type="text/javascript">
+  function show_alert()
+  {
+  alert("Letter generated!  You can now freely edit your letter by clicking within the text box.");
+  }
+</script>
 </head>
 <body>
 <!-- Begin Wrapper -->
    <div id="wrapper">
    <!-- Begin Header -->
      <div id="header">		 
-		 <%= image_tag("writegreenlogo.jpg", :size => "300x67") %>			   
+		 <%= image_tag("writegreenlogo.jpg", :size => "480x107") %>			   
   	 </div>
 		 <!-- End Header -->
 <%= yield %>
@@ -51,6 +56,7 @@
 	     </div>     
 	          
 	   <% else %>
+		 
 		 <div id=	"footer">
 		       
 			   <div class="steps">
