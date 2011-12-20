@@ -6,12 +6,7 @@
   <%= stylesheet_link_tag "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript">
-  function show_alert()
-  {
-  alert("Letter generated!  You can now freely edit your letter by clicking within the text box.");
-  }
-</script>
+
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -59,15 +54,16 @@
 		 
 		 <div id=	"footer">
 		       
-			   <div class="steps">
-			   <h2 style="text-align:center"> Enter Info </h2>
+			   
+			   <div class="steps selected" style="width: 172px;">
+			   <h2 style="text-align:center;"> Edit & Print </h2>
 			   </div>		
-			   <div class="steps">
-			   <h2 style="text-align:center"> Customize Letter </h2>
-			   </div>
-			   <div class="steps selected">
-			   <h2 style="text-align:center" > Edit & Print </h2>
-			   </div>
+			   	<div id="final_instruct"> 
+      	 <h2>We help you get started, but the real power is in telling your unique story.</h2>       	    	
+       	 <h3 style="color: #691F01">Click the text to edit your lettter or "update" to get a different version.</h3>
+
+      	</div>
+			  
 			    
 	     </div>
 	     
