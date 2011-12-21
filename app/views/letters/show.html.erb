@@ -11,8 +11,8 @@
 
         <p>
           <div class="field">
-          <%= label_tag(:name, "Name", :class => "label",  :style => "margin-top:0px;")%>
-          <%= text_field_tag(:name, @name, :class => "fieldset",  :style => "margin-top:0px;") %>
+          <%= label_tag(:name, "Name", :class => "label")%>
+          <%= text_field_tag(:name, @name, :class => "fieldset") %>
           </div>
         </p>
 
@@ -50,9 +50,9 @@
 				
         <p>
           <div class="field">
-          <%= label_tag(:recipient, "Recipient", :class => "label",  :style => "margin-top:0px;")%>
+          <%= label_tag(:recipient, "Recipient", :class => "label")%>
           <%= select_tag(:recipient, options_for_select([@sen_senator_title,@jun_senator_title, @rep_title], :selected => @recipient),
-                         :class => "fieldset",  :style => "margin-top:0px;") %>
+                         :class => "fieldset") %>
           </div>
         </p>
 

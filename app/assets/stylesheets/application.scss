@@ -1,8 +1,15 @@
-* { padding: 0; margin: 0; }
+* { padding: 0; margin: 0; font-family:"Ubuntu"  }
+
+h2 {
+display: block;
+font-size: 18px;
+font-weight: bold;
+}
+
 
 h3 {
  display: block;
- font-size: 1.10em;
+ font-size: 12px;
  font-weight: bold;
  &.options {
   margin: 5px 10px 5px 10px;
@@ -66,6 +73,7 @@ body {
  width: 702px;
  display: inline;
  border-radius:10px;
+ font-size: 12.5px;
 }
 #footer { 
  width: 950px;
@@ -114,7 +122,7 @@ body {
   color: #000000; 
   background: #ffffff;
   padding: 10px 10px 10px 10px; 
-  font-size: 16px;
+  font-size: 14px;
   text-align: center; 
   clear: none; 
  }
@@ -158,27 +166,25 @@ margin-right:auto;
   float: left;
   background-color:#CCCCCC;
   border-radius:10px;
-  padding:10px 10px 10px 10px;
+  padding: 5px 10px 10px 10px;
 }
 
 .label {
   float:left;
   clear: both;
-  font-size:1em;
+  font-size:12px;
   font-weight:bold;
-  margin-bottom:0;
-  margin-left:0;
-  margin-right:0;
-  margin-top:.75em;
+  margin: 8px 0px 0px 0px;
   width:5em;  
+  border-width: 1px;
 }
 
-
-
 .fieldset{
+  font-size: 1em;
   float: right;  
   width: 110px;
-  margin: .5em 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
+  border-width: 1px;
 }
 
 .clear {
