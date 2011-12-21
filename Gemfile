@@ -27,6 +27,7 @@ gem 'sunlight'
 gem 'ym4r'
 gem 'json'
 gem 'therubyracer'
+gem 'thin' #web server
 
 
 # To use ActiveModel has_secure_password
