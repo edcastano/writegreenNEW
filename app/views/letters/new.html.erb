@@ -13,35 +13,35 @@
         <p>
           <div class="field">
           <%= label_tag(:name, "Name", :class => "label")%>
-          <%= text_field_tag(:name, @name, :class => "fieldset") %>
+          <%= text_field_tag(:name, @name, :class => "fieldset", :value => "Jane Doe") %>
           </div>
         </p>
 
         <p>
           <div class="field">
           <%= label_tag(:street_address, "Address", :class => "label")%>
-          <%= text_field_tag(:street_address, @street_address, :class => "fieldset") %>
+          <%= text_field_tag(:street_address, @street_address, :class => "fieldset", :value => "2101 Waverley St") %>
           </div>
         </p>
 
         <p>
           <div class="field">
           <%= label_tag(:city, "City", :class => "label")%>
-          <%= text_field_tag(:city, @city, :class => "fieldset") %>
+          <%= text_field_tag(:city, @city, :class => "fieldset", :value => "Palo Alto") %>
           </div>
         </p>
 
         <p>
           <div class="field">
           <%= label_tag(:state, "State", :class => "label")%>
-          <%= text_field_tag(:state, @state, :class => "fieldset") %>
+          <%= text_field_tag(:state, @state, :class => "fieldset", :value => "CA") %>
           </div>
         </p>
 
         <p>
           <div class="clear">
           <%= label_tag(:zipcode, "Zipcode", :class => "label")%>
-          <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset") %>
+          <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset", :value => "94301") %>
           </div>
         </p>
 		</div>  
