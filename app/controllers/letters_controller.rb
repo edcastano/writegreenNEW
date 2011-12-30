@@ -51,13 +51,7 @@ class LettersController < ApplicationController
 	   @recipient_address = @rep_address[@recipient] 
 	   @recipient_lastname = @rep_lastname[@recipient] 
 	   @recipient_name = @rep_name[@recipient]	  
-	   end 
- 
-   
-    respond_to do |format|
-      format.html 
-      format.json { render json: @letter }
-    end
+	   end      
   end
 
   def edit
@@ -121,15 +115,13 @@ class LettersController < ApplicationController
   def create
     @letter = Letter.new(params[:letter])
 
-    respond_to do |format|
+   
       if @letter.valid?
         format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
-        format.json { render json: @letter, status: :created, location: @letter }
       else
-        format.html { render action: "new" }
-        format.json { render json: @letter.errors, status: :unprocessable_entity }
+        format.html { render action: "new" }  
       end
     end
-  end
+  
 
 end
