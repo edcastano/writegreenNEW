@@ -25,7 +25,7 @@ end
 
 gem 'jquery-rails'
 gem 'sunlight', "~> 1.1.0", :git=>'https://github.com/sunlightlabs/ruby-sunlight.git' 
-gem 'ym4r',:git=>'https://github.com/nofxx/ym4r.git'
+gem 'ym4r'#,:git=>'https://github.com/nofxx/ym4r.git'
 gem 'json'
 gem 'therubyracer'
 gem 'thin' #web server
