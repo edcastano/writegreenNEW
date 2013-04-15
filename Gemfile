@@ -12,6 +12,7 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
+  gem 'debugger'
 end
 
 # Gems used only for assets and not required
@@ -23,13 +24,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'sunlight'
-gem 'ym4r'
+gem 'sunlight', "~> 1.1.0", :git=>'https://github.com/sunlightlabs/ruby-sunlight.git' 
+gem 'ym4r',:git=>'https://github.com/nofxx/ym4r.git'
 gem 'json'
 gem 'therubyracer'
 gem 'thin' #web server
-
-
+gem "geokit"
+#gem 'rubygems'
+# gem 'luigi-sunlight'
+#sudo gem install  --source=http://gems.github.com
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -40,7 +43,7 @@ gem 'thin' #web server
 # gem 'capistrano'
 
 # To use debugger
- #gem 'ruby-debug19', :require => 'ruby-debug'
+# gem 'ruby-debug19', :require => 'ruby-debug'
 
 #group :test do
   # Pretty printed test output

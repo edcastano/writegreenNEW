@@ -1,6 +1,7 @@
-class LettersController < ApplicationController
+require 'geokit'
+include GeoKit::Geocoders
 
-  
+class LettersController < ApplicationController
   
   def show
   @step = 2  #Used to set styling (color) for step buttons
@@ -10,7 +11,6 @@ class LettersController < ApplicationController
   @state = params[:state]
   @zipcode = params[:zipcode]
   @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
-
   @emphasis = params[:emphasis]
   if @emphasis != nil
     @emphasis = params[:emphasis]
@@ -22,9 +22,10 @@ class LettersController < ApplicationController
   else
     @recipient_lastname = " not_selected"
   end
- 
-	@congresspeople = Sunlight::Legislator.all_for(:address => @address)
-	@senior_senator = @congresspeople[:senior_senator]
+  coords = MultiGeocoder.geocode(@address)
+	@congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
+	
+  @senior_senator = @congresspeople[:senior_senator]
 	@junior_senator = @congresspeople[:junior_senator]
 	@representative = @congresspeople[:representative]
 
@@ -75,7 +76,9 @@ class LettersController < ApplicationController
     @recipient_lastname = " not_selected"
   end
  
-	@congresspeople = Sunlight::Legislator.all_for(:address => @address)
+  coords = MultiGeocoder.geocode(@address)
+	@congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
+	
 	@senior_senator = @congresspeople[:senior_senator]
 	@junior_senator = @congresspeople[:junior_senator]
 	@representative = @congresspeople[:representative]
