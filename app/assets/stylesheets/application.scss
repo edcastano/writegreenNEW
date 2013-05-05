@@ -331,6 +331,8 @@ margin-right:auto;
   width: 197px;
   box-sizing:border-box;
   margin-bottom: 17px;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 
 .letter-button {
@@ -359,6 +361,8 @@ margin-right:auto;
   padding-right: 0;
   padding-left: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
   padding: 11px 19px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -450,6 +454,8 @@ margin-top: 50px;
   height: 500px;
   border-bottom: 9px solid #e0e0e0;
   margin-top: 60px;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
   position: relative;
 }
 
@@ -475,6 +481,8 @@ input[type="text"] {
 #letter_options_new input {
   box-sizing: border-box;
   height: 40px;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 
 #letter_options_new .field {
@@ -571,6 +579,8 @@ label[for=zipcode] {
 
 textarea#finalletter {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
   width: 600px !important;
   border: none;
   background: #f0f0f1;
@@ -594,6 +604,8 @@ textarea#finalletter {
   width: 265px !important;
   height: 40px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 .chzn-container .chzn-drop {
   background: #f0f0f1;
@@ -642,6 +654,8 @@ textarea#finalletter {
   background:#f0f0f1;
   height: 40px;
   margin-top: 5px;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 .chzn-container-single .chzn-single span {
   margin-right: 26px;
@@ -737,6 +751,8 @@ textarea#finalletter {
   -webkit-box-sizing: border-box;
   -khtml-box-sizing : border-box;
   box-sizing        : border-box;
+  -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 .chzn-container-multi .chzn-choices li {
   float: left;
