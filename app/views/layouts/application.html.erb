@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Writegreen - Empowering Environmental Engagement</title>
+  <script type="text/javascript" src="//use.typekit.net/xfl1dlm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <%= stylesheet_link_tag    "application" %>
   <%= stylesheet_link_tag "print", :media => "print" %>
   <%= javascript_include_tag "application" %>
@@ -9,58 +11,39 @@
 
 </head>
 <body>
+<div id="outside-wrapper"></div>
 <!-- Begin Wrapper -->
    <div id="wrapper">
    <!-- Begin Header -->
-     <div id="header">		 
-		 <%= image_tag("writegreenlogo.jpg", :size => "480x107") %>			   
+     <div id="header">
+		 	<div id="logo-container">
+		 		<div id="logo">
+		 			<%= link_to image_tag("logo.png") %>
+		 		</div>
+		 		<div id="social">
+		 			<%= link_to image_tag('facebook_top.png') %>
+		 			<%= link_to image_tag('twitter_top.png') %>
+		 		</div>
+		 	</div>
   	 </div>
 		 <!-- End Header -->
-<%= yield %>
-<!-- Begin Footer -->
-		 <% if @step == 1 %>
-		 <div id=	"footer">
-		       
-			   <div class="steps" style="width: 896px; color:#330000">
-			   *Please note: The Alpha version of WriteGreen is best viewed in the Chrome and Firefox browsers.  We will be accomodating other browsers soon.
-			   </div>		
-
-	     </div>
-	     
-	     <% elsif @step == 2 %>
-		 <div id=	"footer">
-		       
-			   <div class="steps" style="width: 896px;color:#330000">
-			   *Please note: The Alpha version of WriteGreen is best viewed in the Chrome and Firefox browsers.  We will be accomodating other browsers soon.
-			   </div>	
-			   
-			    
-	     </div>     
-	          
-	   <% else %>
-		 
-		 <div id=	"footer">
-		       
-			   
-			   <div class="steps selected" style="width: 172px;">
-			   <h2 style="text-align:center;"> Edit & Print </h2>
-			   </div>		
-			   	<div id="final_instruct"> 
-      	 <h2>We help you get started, but the real power is in telling your unique story.</h2>       	    	
-       	 <h3 style="color: #691F01">Click the text to edit your letter or "update" to get a different version. Each update generates a unique letter.</h3>
-
-      	</div>
-			  
-			    
-	     </div>
-	     
-	     <% end %>	     
-	     
-		 <!-- End Footer -->
-		 
+		 <div id="top-content">
+		 	<h1>WriteGreen makes it easy to write to Congress about climate change.</h1>
+		 	<p>
+		 		Write letters to Congress that are more influential than the form letters commonly used today. It's like having a personal writing coach, but easier, faster, and free. We help you get started, but the real power is in telling your unique story.
+		 	</p>
+		 	<p>
+		 		What climage change angle are you?
+		 	</p>
+		 	<div class="letter-button-holder">
+		 		<a href="#" class="letter-button letter-button-start">Start your letter</a>
+		 	</div>
+		 </div>
+			<%= yield %>
    </div>
    <!-- End Wrapper -->
-		  <div class="clear">
+   <div class="clear"></div>
+		 <div class="clear">
     <%if Rails.env.development? %>
     <%= debug(params) %>
      <h3> These are your selections</h3><br>
@@ -70,9 +53,10 @@
 		  <%= @geography %><br>
     <br> <h3> Content variation </h3>
      <%= "Body content is #{@r}" %><br>
-     <%= "Closing content is #{@c}.#{@v}" %><br>   
+     <%= "Closing content is #{@c}.#{@v}" %><br>
      <%= "We are on step #{@step}." %><br>
     <% end %>
     </div>
+
 </body>
 </html>

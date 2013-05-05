@@ -1,12 +1,12 @@
 
-                    		 
+
 		 <!-- Begin Left Column -->
 		 <div id="leftcolumn">
-		 
-		     
+
+
         <h3 class="options unselect">1) Enter your information</h3>
         <div id="letter_options">
-         <%= form_tag(:method =>'put', :multipart => true) do %> 
+         <%= form_tag(:method =>'put', :multipart => true) do %>
 
         <p>
           <div class="field">
@@ -43,10 +43,10 @@
           </div>
         </p>
 		</div>
-		 
-		 <h3 class="options unselect">2) Customize your letter </h3>		
+
+		 <h3 class="options unselect">2) Customize your letter </h3>
     <div id="letter_options" class="clear" >
-				
+
         <p>
           <div class="field">
           <%= label_tag(:recipient, "Recipient", :class => "label")%>
@@ -62,7 +62,7 @@
 		      ['Risk/Personal Values', 'RiskValues'],
           ['Health & Economy', 'HealthEcon'],
           ['National Security', 'NationalSec'],
-          ['Economic Growth', 'EconGrowth'],          
+          ['Economic Growth', 'EconGrowth'],
           ['American Values', 'AmericanVal'],
           ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
           </div>
@@ -83,32 +83,35 @@
           <%= label_tag(:geography, "Geography", :class => "label") %>
           <%= select_tag(:geography, options_for_select([['California', 'California'],
           ['Other', 'Other']], :selected => @geography), :class => "fieldset") %>
-          </div> 
-          
+          </div>
+
          <p>
         </div>
 		  <div class="actions">
             <%= submit_tag("Update Letter", :class => "button fieldset") %>
           </div>
           </p>
-                    
+
           <button type="button" class="button fieldset" onclick="window.print();
           return false;" >Print Letter</button>
-                  
+
         <% end %>
-		 
+
 		 </div>
 		 <!-- End Left Column -->
-		 
+
 		 <!-- Begin Right Column -->
-          
-    <textarea id="rightcolumn">
-      <%= letter %>   
-    </textarea>        
-    
-		 
+
+<!--     <textarea id="rightcolumn finalletter
+
+ -->
+    <textarea id="finalletter">
+      <%= letter %>
+    </textarea>
+
+
 		 <!-- End Right Column -->
-		 
+
 
 
 
