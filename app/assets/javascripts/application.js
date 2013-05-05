@@ -18,6 +18,7 @@ $(document).ready(function() {
   $('#ideology').chosen();
   $('#religion').chosen();
   $('#geography').chosen();
+  $('.letter-button.randomize').hide()
 
   $(".letter-button.step1").click(function() {
 
@@ -91,6 +92,7 @@ $(".letter-button.step2").click(function() {
            		console.log(html);
            		var letter = html.find('#finalletter');
            		$('#lettercontainer').empty().append(letter);
+           		$('.letter-button.randomize').show()
            		event.preventDefault();
            		//calculate destination place
            		var dest=0;
@@ -101,6 +103,35 @@ $(".letter-button.step2").click(function() {
            		}
            		//go to destination
            		$('html,body').animate({scrollTop:dest}, 1500,'swing');
+
+           },
+           error: function(data){
+           	var a = data.responseText.toString();
+           	console.log(a);
+           	window.a = a;
+           	// console.log(a['name']);
+           	console.log('error');
+           }
+         });
+
+    return false; // avoid to execute the actual submit of the form.
+});
+
+
+$(".letter-button.randomize").click(function() {
+
+    var url = "edit"; // the script where you handle the form input.
+    console.log($('#letter_options_new form').serialize());
+
+    $.ajax({
+           type: "GET",
+           url: url,
+           data: $('#letter_options_new form').serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+           		var html = $(data);
+           		var letter = html.find('#finalletter');
+           		$('#lettercontainer').empty().append(letter);
 
            },
            error: function(data){
