@@ -1,4 +1,6 @@
 Writegreenv2::Application.routes.draw do
+  resources :shares
+
   root :to => "Letters#new"
   resources :sentences
   resources :letters

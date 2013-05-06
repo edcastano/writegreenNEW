@@ -4,6 +4,8 @@ include GeoKit::Geocoders
 class LettersController < ApplicationController
 
   def show
+  @share_url = "http://writegreen.herokuapp.com/"
+    
   @step = 2  #Used to set styling (color) for step buttons
   @name = params[:name]
   @street_address = params[:street_address]
@@ -117,8 +119,10 @@ class LettersController < ApplicationController
 	   @recipient_lastname = @rep_lastname[@recipient]
 	   @recipient_name = @rep_name[@recipient]
 	   end
-
-
+  if(!@share)
+    @share  = Share.new
+  end
+  @share_url = "http://writegreen.herokuapp.com/shares/#{@share.id}"
   end
 
   def new
@@ -128,13 +132,10 @@ class LettersController < ApplicationController
 
   def create
     @letter = Letter.new(params[:letter])
-
-
       if @letter.valid?
         format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
       else
         format.html { render action: "new" }
       end
     end
-
 end

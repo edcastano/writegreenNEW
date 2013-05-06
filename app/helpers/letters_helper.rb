@@ -97,6 +97,12 @@ end
 
 def letter
   rep_address + greeting + body + closing
+  letter = (greeting + body + closing)
+  @share.update_attributes(:congressman=>@recipient_name,:address=>@recipient_address,:letter=>letter,:shorten_letter=>letter.first(200),:from=>@name)
+  # rails generate scaffold Share congressman:string address:string letter:text shorten_letter:string from:string 
+  @share.save
+  rep_address + greeting + body + closing
+  
 end
 
 end

@@ -401,7 +401,14 @@ span.greenarrow:hover {
 .letter-button.twitter {
   background: #45b0e3;
 }
-
+.letter-button.twitter a{
+  text-decoration: none;
+  color: white;
+}
+.letter-button.facebook a{
+  text-decoration: none;
+  color: white;
+}
 .letter-button.twitter span {
   background: url('twitter_button.png') no-repeat;
   padding-left: 30px;
