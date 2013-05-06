@@ -173,6 +173,10 @@ $(".letter-button.randomize").click(function() {
 		  window.open("mailto:?Subject=Writegreen - Empowering Environmental Engagement&body=" + text ,'_newtab');
 	});
 
+	$('span.greenarrow').click(function(){
+		$('html,body').animate({scrollTop:0}, 1500,'swing');
+	})
+
 
 
 });
