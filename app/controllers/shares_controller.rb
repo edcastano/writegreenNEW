@@ -14,7 +14,7 @@ class SharesController < ApplicationController
   # GET /shares/1.json
   def show
     @share = Share.find(params[:id])
-
+    @share_url = "http://writegreen.herokuapp.com/shares/#{@share.id}"
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @share }
