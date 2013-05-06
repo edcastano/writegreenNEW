@@ -11,28 +11,28 @@
                 <p>
                   <div class="field">
                   <%= label_tag(:name, "Name", :class => "label")%></br>
-                  <%= text_field_tag(:name, @name, :class => "fieldset", :placeholder => "Jane Doe") %>
+                  <%= text_field_tag(:name, @name, :class => "fieldset", :value => "Jane Doe") %>
                   </div>
                 </p>
 
                 <p>
                   <div class="field">
                   <%= label_tag(:street_address, "Address", :class => "label")%></br>
-                  <%= text_field_tag(:street_address, @street_address, :class => "fieldset", :placeholder => "2101 Waverley St") %>
+                  <%= text_field_tag(:street_address, @street_address, :class => "fieldset", :value => "2101 Waverley St") %>
                   </div>
                 </p>
 
                 <p>
                   <div class="field field-top">
                   <%= label_tag(:city, "City", :class => "label")%></br>
-                  <%= text_field_tag(:city, @city, :class => "fieldset", :placeholder => "Palo Alto") %>
+                  <%= text_field_tag(:city, @city, :class => "fieldset", :value => "Palo Alto") %>
                   </div>
                 </p>
 
                 <p>
                   <div class="field field-top">
                   <%= label_tag(:state, "State", :class => "label")%></br>
-<!--                   <%= text_field_tag(:state, @state, :class => "fieldset", :placeholder => "CA") %>
+<!--                   <%= text_field_tag(:state, @state, :class => "fieldset", :value => "CA") %>
  -->                  <select data-placeholder="Choose a State" name="state" id="dropdownstates">
                     <option value=""></option>
                     <option value="AL">Alabama</option>
@@ -93,7 +93,7 @@
                 <p>
                   <div class="field field-top">
                   <%= label_tag(:zipcode, "Zipcode", :class => "label")%></br>
-                  <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset", :placeholder => "94301") %>
+                  <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset", :value => "94301") %>
                   </div>
                 </p>
                 <div class="clear"></div>

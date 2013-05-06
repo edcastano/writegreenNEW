@@ -91,6 +91,11 @@ $(".letter-button.step2").click(function() {
            		var html = $(data);
            		console.log(html);
            		var letter = html.find('#finalletter');
+           		var share = html.find('#shareurl').text().trim();
+           		console.log(share);
+           		$('.letter-button.twitter a').attr('href', 'https://twitter.com/intent/tweet?url='+ share+'&text=I just wrote to Congress using www.writegren.org!');
+           		$('.letter-button.facebook a').attr('href', 'http://www.facebook.com/sharer/sharer.php?u='+ share+'&text=I just wrote to Congress using www.writegren.org!');
+
            		$('#lettercontainer').empty().append(letter);
            		$('.letter-button.randomize').show()
            		event.preventDefault();

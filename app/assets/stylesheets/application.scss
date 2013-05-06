@@ -1,4 +1,11 @@
-* { padding: 0; margin: 0; font-family:"proxima-nova"  }
+* {
+  padding: 0;
+  margin: 0;
+  font-family:"proxima-nova";
+  -webkit-font-smoothing:antialiased;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
 input:focus {
     outline:none;
 }

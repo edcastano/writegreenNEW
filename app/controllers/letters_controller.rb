@@ -5,7 +5,7 @@ class LettersController < ApplicationController
 
   def show
   @share_url = "http://writegreen.herokuapp.com/"
-    
+
   @step = 2  #Used to set styling (color) for step buttons
   @name = params[:name]
   @street_address = params[:street_address]
@@ -120,9 +120,9 @@ class LettersController < ApplicationController
 	   @recipient_name = @rep_name[@recipient]
 	   end
   if(!@share)
-    @share  = Share.new
+    @share  = Share.create!();
   end
-  @share_url = "http://writegreen.herokuapp.com/shares/#{@share.id}"
+	  @share_url = "http://writegreen.org/shares/#{@share.id}"
   end
 
   def new
