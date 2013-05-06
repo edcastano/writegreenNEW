@@ -60,7 +60,7 @@ $(document).ready(function() {
                       dest=$('.new-form-box.form-2').offset().top;
                  }
                  //go to destination
-                 $('html,body').animate({scrollTop:dest}, 1500,'swing');
+                 $('html,body').animate({scrollTop:dest}, 1000,'swing');
                  $('input#name').focus();
 
              },
@@ -93,8 +93,8 @@ $(".letter-button.step2").click(function() {
            		var letter = html.find('#finalletter');
            		var share = html.find('#shareurl').text().trim();
            		console.log(share);
-           		$('.letter-button.twitter a').attr('href', 'https://twitter.com/intent/tweet?url='+ share+'&text=I just wrote to Congress using www.writegren.org!');
-           		$('.letter-button.facebook a').attr('href', 'http://www.facebook.com/sharer/sharer.php?u='+ share+'&text=I just wrote to Congress using www.writegren.org!');
+           		$('.letter-button.twitter a').attr('href', 'https://twitter.com/intent/tweet?url='+ share+'&text=I just wrote to Congress using www.writegreen.org!');
+           		$('.letter-button.facebook a').attr('href', 'http://www.facebook.com/sharer/sharer.php?u='+ share+'&text=I just wrote to Congress using www.writegreen.org!');
 
            		$('#lettercontainer').empty().append(letter);
            		$('.letter-button.randomize').show()
@@ -107,7 +107,7 @@ $(".letter-button.step2").click(function() {
            		     dest=$('.new-form-box.form-3').offset().top;
            		}
            		//go to destination
-           		$('html,body').animate({scrollTop:dest}, 1500,'swing');
+           		$('html,body').animate({scrollTop:dest}, 1000,'swing');
 
            },
            error: function(data){
@@ -152,9 +152,9 @@ $(".letter-button.randomize").click(function() {
 });
 
 
-	$('.letter-button-start').click(function(){
+	$('.letter-button-start').click(function(e){
 		// $.scrollTo('.new-form-box.form-1');
-		event.preventDefault();
+		e.preventDefault();
 		//calculate destination place
 		var dest=0;
 		if($('.new-form-box.form-1').offset().top > $(document).height()-$(window).height()){
@@ -163,7 +163,7 @@ $(".letter-button.randomize").click(function() {
 		     dest=$('.new-form-box.form-1').offset().top;
 		}
 		//go to destination
-		$('html,body').animate({scrollTop:dest}, 1500,'swing');
+		$('html,body').animate({scrollTop:dest}, 1000,'swing');
 
 	});
 
@@ -179,7 +179,7 @@ $(".letter-button.randomize").click(function() {
 	});
 
 	$('span.greenarrow').click(function(){
-		$('html,body').animate({scrollTop:0}, 1500,'swing');
+		$('html,body').animate({scrollTop:0}, 1000,'swing');
 	})
 
 
