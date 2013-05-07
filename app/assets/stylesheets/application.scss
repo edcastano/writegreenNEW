@@ -345,7 +345,7 @@ margin-right:auto;
 .letter-button {
   font-family: "proxima-nova",sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   background-color: #80ac40;
   padding-bottom: 12px;
   padding-top: 13px;
@@ -445,12 +445,14 @@ span.greenarrow:hover {
 
 .letter-button.step1 {
   font-size: 17px;
-  margin-top: 50px;
+  // margin-top: 50px;
+  float: left;
 }
 
 .letter-button.step2 {
 font-size: 17px;
-margin-top: 50px;
+// margin-top: 50px;
+float: left;
 }
 
 
@@ -479,7 +481,7 @@ margin-top: 50px;
 input[type="text"] {
   color: #666666;
   font-size: 14px;
-  padding: 8px 0 9px 10px;
+  padding: 9px 0 9px 10px;
   text-indent: 1px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -607,6 +609,15 @@ textarea#finalletter {
   border-radius: 4px;
   padding:34px;
   height: 850px !important;
+}
+
+.error {
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #b94a48;
+  font-size: 16px;
 }
 
 /* @group Base */

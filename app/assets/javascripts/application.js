@@ -12,6 +12,8 @@
 
 $(document).ready(function() {
   // put all your jQuery goodness in here.
+  $('.error.step2').hide();
+  $('.error.step1').hide();
   $('#dropdownstates').chosen();
   $('#emphasis').chosen();
   $('#recipient').chosen();
@@ -62,14 +64,12 @@ $(document).ready(function() {
                  //go to destination
                  $('html,body').animate({scrollTop:dest}, 1000,'swing');
                  $('input#name').focus();
+                 $('.error.step2').hide();
+                 $('.error.step1').hide();
 
              },
              error: function(data){
-             	var a = data.responseText.toString();
-             	console.log(a);
-             	window.a = a;
-             	// console.log(a['name']);
-             	console.log('error');
+             	$('.error.step1').show();
              }
            });
 
@@ -108,14 +108,12 @@ $(".letter-button.step2").click(function() {
            		}
            		//go to destination
            		$('html,body').animate({scrollTop:dest}, 1000,'swing');
+           		$('.error.step2').hide();
+           		$('.error.step1').hide();
 
            },
            error: function(data){
-           	var a = data.responseText.toString();
-           	console.log(a);
-           	window.a = a;
-           	// console.log(a['name']);
-           	console.log('error');
+           	$('.error.step2').show();
            }
          });
 
