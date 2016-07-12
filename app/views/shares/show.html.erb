@@ -1,0 +1,37 @@
+
+    <div class="new-form-box form-3">
+      <div class="form-content">
+        <div class="content-inside">
+          <h1>Voila!</h1>
+          <p><%=@share.from%> wrote this letter to <%=@share.congressman%></p>
+          <div id="sharingitems">
+            <div class="letter-button print">
+              <span>Print Letter</span>
+            </div>
+            <div class="letter-button email">
+              <span>Email Letter</span>
+            </div>
+            <div class="letter-button twitter">
+			  <a target="_blank" style="ext-transform:none" href="https://twitter.com/share?url=<%=u @share_url%>"><span>Share on Twitter</span></a>
+            </div>
+            <div class="letter-button facebook">
+                <a target="_blank" style="ext-transform:none" href="http://www.facebook.com/sharer/sharer.php?u=<%=u @share_url%>"><span>Share on Facebook</span>
+				</a>
+			</div>
+      
+          </div>
+          <div class="letter-button randomize">
+            <span>Randomize!</span>
+          </div>
+          <div id="lettercontainer">
+		      <textarea id="finalletter">
+<%= @share.congressman %>,
+<%= @share.address %>
+
+<%=@share.letter%>
+		  </textarea>
+          </div>
+        </div>
+      </div>
+      <span class="greenarrow"></span>
+    </div>

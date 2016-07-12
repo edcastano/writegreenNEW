@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: MyText
+  greeting: MyText
+  emphasis: MyText
+  ideology: MyText
+  geography: MyText
+  closing: MyText
+
+two:
+  address: MyText
+  greeting: MyText
+  emphasis: MyText
+  ideology: MyText
+  geography: MyText
+  closing: MyText

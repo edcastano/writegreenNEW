@@ -1,0 +1,227 @@
+
+  <div class="new-form-box form-1" id="p1">
+    <div class="form-content">
+      <div class="content-inside">
+        <div class="imagestep"></div>
+        <h1>Enter your information</h1>
+        <p>Your information will be used to match you to your congressional representatives.</p>
+            <div id="letter_options_new">
+                <%= form_tag(letter_path, :method =>'get', :multipart => true) do %>
+
+                <p>
+                  <div class="field">
+                  <%= label_tag(:name, "Name", :class => "label")%></br>
+                  <%= text_field_tag(:name, @name, :class => "fieldset", :placeholder => "Jane Doe") %>
+                  </div>
+                </p>
+
+                <p>
+                  <div class="field">
+                  <%= label_tag(:street_address, "Address", :class => "label")%></br>
+                  <%= text_field_tag(:street_address, @street_address, :class => "fieldset", :placeholder => "2101 Waverley St") %>
+                  </div>
+                </p>
+
+                <p>
+                  <div class="field field-top">
+                  <%= label_tag(:city, "City", :class => "label")%></br>
+                  <%= text_field_tag(:city, @city, :class => "fieldset", :placeholder => "Palo Alto") %>
+                  </div>
+                </p>
+
+                <p>
+                  <div class="field field-top">
+                  <%= label_tag(:state, "State", :class => "label")%></br>
+<!--                   <%= text_field_tag(:state, @state, :class => "fieldset", :placeholder => "CA") %>
+ -->                  <select data-placeholder="Choose a State" name="state" id="dropdownstates">
+                    <option value=""></option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                  </div>
+                </p>
+
+                <p>
+                  <div class="field field-top">
+                  <%= label_tag(:zipcode, "Zipcode", :class => "label")%></br>
+                  <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset", :placeholder => "94301") %>
+                  </div>
+                </p>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <p>
+            <div class="actions">
+            <%= submit_tag("Customize your letter", :class => "letter-button step1") %>
+            <div class='error step1'>
+              Oh snap! Change a few things up and try submitting again.
+            </div>
+            </div>
+            </p>
+            <% end %>
+      </div>
+      <div class="content-outside">
+        <h3>Did you know?</h3>
+        <p>Of the 325 million constituent correspondences received by Congress in 2006, 95% was electronic and 90-95% were form letters.</p>
+      </div>
+    </div>
+    <span class="greenarrow"></span>
+  </div>
+
+    <div class="new-form-box form-2">
+      <div class="form-content">
+        <div class="content-inside">
+          <div class="imagestep"></div>
+          <h1>Customize your letter.</h1>
+          <p>Select from the options for recipient, emphais, perspective, etc.</p>
+      <div id="letter_options_new" class="clear">
+        <%= form_tag(letter_path, :method =>'get', :multipart => true) do %>
+          <div class="field" id="recipient_field">
+                <label class="label" for="recipient">Recipient</label></br id="recipient_br">
+                <select class="fieldset" id="recipient" name="recipient" data-placeholder="Choose a recipient">
+                  <option value=""></option>
+                </select>
+                </div>
+              <div class="field">
+                <label class="label" for="emphasis">Emphasis</label></br>
+                <select class="fieldset" id="emphasis" name="emphasis" data-placeholder="Chose an empahisis">
+                  <option value=""></option>
+      <option value="FamPollute">Health &amp; Pollution</option>
+      <option value="RiskValues">Risk/Personal Values</option>
+      <option value="HealthEcon">Health &amp; Economy</option>
+      <option value="NationalSec">National Security</option>
+      <option value="EconGrowth">Economic Growth</option>
+      <option value="AmericanVal">American Values</option>
+      <option value="CommonSense">Common sense</option></select>
+                </div>
+              <p></p>
+                <div class="field field-top">
+                <label class="label" for="ideology">Perspective</label></br>
+                <select class="fieldset" id="ideology" name="ideology" data-placeholder="Choose a perspective">
+                  <option value=""></option>
+                  <option value="Moderate">Moderate</option>
+      <option value="Liberal">Liberal</option>
+      <option value="Conservative">Conservative</option></select>
+                </div>
+
+                <div class="field field-top">
+                <label class="label" for="religion">Religion</label></br>
+                <select class="fieldset" id="religion" name="religion" data-placeholder="Choose a religion">
+                  <option value=""></option>
+                  <option value="Secular">Secular</option>
+      <option value="Christian">Christian</option></select>
+                </div>
+
+                <div class="field field-top">
+                <label class="label" for="geography">Geography</label></br>
+                <select class="fieldset" id="geography" name="geography" data-placeholder="Choose a geography">
+                  <option value=""></option>
+                  <option value="California">California</option>
+      <option value="Other">Other</option></select><div class="clear"></div>
+                </div><div class="clear"></div></div>
+                <div class="clear"></div><p></p>
+                <div class="actions">
+                  <input class="letter-button step2" name="commit" type="submit" value="Generate your letter">
+                  <div class='error step2'>
+                    Oh snap! Change a few things up and try submitting again.
+                  </div>
+                </div>
+      <% end %>
+    </div>
+      <div class="content-outside">
+        <h3>Did you know?</h3>
+        <p>It is estimated that total damages associated with emissions of air pollution from 10,000 major sources in the US are between $71 billion and $277 billion</p>
+      </div>
+    </div>
+    <span class="greenarrow"></span>
+  </div>
+
+    <div class="new-form-box form-3">
+      <div class="form-content">
+        <div class="content-inside">
+          <div class="imagestep"></div>
+          <h1>Voila!</h1>
+          <p>Click the text to add some of your own words, or "randomize" to get a different version</p>
+          <div id="sharingitems">
+            <div class="letter-button print">
+              <span>Print Letter</span>
+            </div>
+            <div class="letter-button email">
+              <span>Email Letter</span>
+            </div>
+            <div class="letter-button twitter">
+			  <a target="_blank" style="ext-transform:none" href="https://twitter.com/share?url=<%=u @share_url%>"><span>Share on Twitter</span></a>
+            </div>
+            <div class="letter-button facebook">
+                <a target="_blank" style="ext-transform:none" href="http://www.facebook.com/sharer/sharer.php?u=<%=u @share_url%>"><span>Share on Facebook</span>
+				</a>
+			</div>
+          </div>
+          <div class="letter-button randomize">
+            <span>Randomize!</span>
+          </div>
+          <div id="lettercontainer">
+            Oh snap! Please fill in the form first to see your letter.
+          </div>
+        </div>
+      </div>
+      <span class="greenarrow"></span>
+    </div>
+
+
+
+
+
+
+
+
+
