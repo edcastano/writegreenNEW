@@ -25,7 +25,7 @@ class LettersController < ApplicationController
     @recipient_lastname = " not_selected"
   end
   coords = MultiGeocoder.geocode(@address)
-  debugger
+  
 	@congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
 
   @senior_senator = @congresspeople[:senior_senator]
