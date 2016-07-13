@@ -1,3 +1,3 @@
-  require 'rubygems'
-  require 'sunlight'
-  Sunlight::Base.api_key = 'd0bf729df6784c0ba12028a78949ce73'
+  # require 'rubygems'
+  # require 'sunlight'
+  # Sunlight::Base.api_key = 'd0bf729df6784c0ba12028a78949ce73'

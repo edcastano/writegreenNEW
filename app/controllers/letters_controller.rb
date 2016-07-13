@@ -24,13 +24,19 @@ class LettersController < ApplicationController
   else
     @recipient_lastname = " not_selected"
   end
-  coords = MultiGeocoder.geocode(@address)
-  
-	@congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
 
-  @senior_senator = @congresspeople[:senior_senator]
-	@junior_senator = @congresspeople[:junior_senator]
-	@representative = @congresspeople[:representative]
+  coords = MultiGeocoder.geocode(@address)
+  @senior_senator = congresspeople(coords)[:senior_senator]
+  @junior_senator = congresspeople(coords)[:junior_senator]
+  @representative = congresspeople(coords)[:representative]
+
+  # sunlight code
+	# @congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
+  # @senior_senator = @congresspeople[:senior_senator]
+	# @junior_senator = @congresspeople[:junior_senator]
+	# @representative = @congresspeople[:representative]
+  # end sunlight code
+
 	@senior_senatorEmail = @senior_senator.email
 	@junior_senatorEmail = @junior_senator.email
 	@representativeEmail = @representative.email
@@ -89,13 +95,18 @@ class LettersController < ApplicationController
   end
 
   coords = MultiGeocoder.geocode(@address)
-	@congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
+  @senior_senator = congresspeople(coords)[:senior_senator]
+  @junior_senator = congresspeople(coords)[:junior_senator]
+  @representative = congresspeople(coords)[:representative]
 
-	@senior_senator = @congresspeople[:senior_senator]
-	@junior_senator = @congresspeople[:junior_senator]
-	@representative = @congresspeople[:representative]
+  # sunlight code
+	# @congresspeople = Sunlight::Legislator.all_for(:latitude => coords.lat, :longitude => coords.lng)
+	# @senior_senator = @congresspeople[:senior_senator]
+	# @junior_senator = @congresspeople[:junior_senator]
+	# @representative = @congresspeople[:representative]
+  # end sunlight code
 
-    @sen_senator_title = 'Senator '+@senior_senator.firstname + " " + @senior_senator.lastname
+  @sen_senator_title = 'Senator '+@senior_senator.firstname + " " + @senior_senator.lastname
 	@jun_senator_title = 'Senator '+@junior_senator.firstname + " " + @junior_senator.lastname
 	@rep_title = 'Representative '+@representative.firstname + " " + @representative.lastname
 
@@ -115,11 +126,11 @@ class LettersController < ApplicationController
 	@rep_address = Hash[[[@sen_senator_title, @sen_senator_address], [@jun_senator_title, @jun_senator_address], [@rep_title, @rep_address]]]
 	@rep_lastname = Hash[[[@sen_senator_title, @sen_senator_title_lastname], [@jun_senator_title, @jun_senator_title_lastname], [@rep_title, @rep_title_lastname]]]
 	@rep_name = Hash[[[@sen_senator_title, @sen_senator_name], [@jun_senator_title, @jun_senator_name], [@rep_title, @rep_name]]]
-	   if @rep_address[@recipient] != nil
-	   @recipient_address = @rep_address[@recipient]
-	   @recipient_lastname = @rep_lastname[@recipient]
-	   @recipient_name = @rep_name[@recipient]
-	   end
+	  if @rep_address[@recipient] != nil
+	    @recipient_address = @rep_address[@recipient]
+	    @recipient_lastname = @rep_lastname[@recipient]
+	    @recipient_name = @rep_name[@recipient]
+	  end
   if(!@share)
     @share  = Share.create!();
   end
