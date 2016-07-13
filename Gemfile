@@ -12,9 +12,9 @@ group :production do
   gem 'pg'
 end
 group :development, :test do
-  # gem 'sqlite3'
   gem 'mysql2', '~> 0.3.18'
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 # Gems used only for assets and not required

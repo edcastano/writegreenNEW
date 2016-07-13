@@ -126,11 +126,13 @@ class LettersController < ApplicationController
 	@rep_address = Hash[[[@sen_senator_title, @sen_senator_address], [@jun_senator_title, @jun_senator_address], [@rep_title, @rep_address]]]
 	@rep_lastname = Hash[[[@sen_senator_title, @sen_senator_title_lastname], [@jun_senator_title, @jun_senator_title_lastname], [@rep_title, @rep_title_lastname]]]
 	@rep_name = Hash[[[@sen_senator_title, @sen_senator_name], [@jun_senator_title, @jun_senator_name], [@rep_title, @rep_name]]]
-	  if @rep_address[@recipient] != nil
-	    @recipient_address = @rep_address[@recipient]
-	    @recipient_lastname = @rep_lastname[@recipient]
-	    @recipient_name = @rep_name[@recipient]
-	  end
+
+  if @rep_address[@recipient] != nil
+    @recipient_address = @rep_address[@recipient]
+    @recipient_lastname = @rep_lastname[@recipient]
+    @recipient_name = @rep_name[@recipient]
+  end
+
   if(!@share)
     @share  = Share.create!();
   end
