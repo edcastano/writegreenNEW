@@ -38,29 +38,34 @@ end
 
 #Populates the paragraph, 'a', 'b' & 'c' are the order of each paragraph
 def body
-
-  @r = rand(3)
+ @r = rand(3)
  if @r == 1
   "\n\n" + get_content('Intro', 'component') + " " +
   get_content(@emphasis, "emphasis") + "\n\n" +
   get_content(@ideologyKey, "ideology")  + "\n\n" +
   if @geography != "Other"
-  get_content(@geography, "geography")
+    get_content(@geography, "geography")
+  else
+    ""
   end
  elsif @r == 2
   "\n\n" + get_content('Intro', 'component') + " " +
   get_content(@ideologyKey, "ideology") +
   "\n\n" + get_content(@emphasis, "emphasis") +
 	if @geography != "Other"
-	"\n\n" + get_content(@geography, "geography")
+	  "\n\n" + get_content(@geography, "geography")
+  else
+    ""
 	end
  else
-	 "\n\n" + get_content('Intro', 'component') + " " +
-	 get_content(@emphasis, "emphasis") +
-	 if @geography != "Other"
-	 "\n\n" + get_content(@geography, "geography")
-	 end +
-	 "\n\n" + get_content(@ideologyKey, "ideology")
+	"\n\n" + get_content('Intro', 'component') + " " +
+	get_content(@emphasis, "emphasis") +
+	if @geography != "Other"
+	  "\n\n" + get_content(@geography, "geography")
+  else
+    ""
+	end
+	  "\n\n" + get_content(@ideologyKey, "ideology")
  end
 end
 
