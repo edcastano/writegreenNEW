@@ -98,7 +98,7 @@ $(".letter-button.step2").click(function() {
 
            		$('#lettercontainer').empty().append(letter);
            		$('.letter-button.randomize').show()
-           		event.preventDefault();
+           		// event.preventDefault();
            		//calculate destination place
            		var dest=0;
            		if($('.new-form-box.form-3').offset().top > $(document).height()-$(window).height()){
