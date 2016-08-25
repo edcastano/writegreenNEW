@@ -53,7 +53,7 @@ $(document).ready(function() {
                  $("#recipient").prepend("<option value='' selected='selected'></option>");
                  $('#recipient').chosen();
                  console.log(s);
-                 event.preventDefault();
+                 // event.preventDefault();
                  //calculate destination place
                  var dest=0;
                  if($('.new-form-box.form-2').offset().top > $(document).height()-$(window).height()){
