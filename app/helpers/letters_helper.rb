@@ -10,13 +10,13 @@ end
 
 # Reads the total number of entries for the 'focus'/'focus_head' selection.
 def count_variations(focus, focus_header)
-content_array = Sentence.where(focus_header.to_sym => focus)
-content_array.maximum("order")
+  content_array = Sentence.where(focus_header.to_sym => focus)
+  content_array.maximum("order")
 end
 
 # Pulls a random pull_entry from the options available given the parameters
 def pull_entry(focus, sequence, focus_header)
-entry_array = Sentence.where(
+  entry_array = Sentence.where(
   focus_header.to_sym => focus,
   :order	=> sequence
   )
@@ -24,17 +24,17 @@ sentence = entry_array[rand(entry_array.length)]
 return sentence.content
 end
 
-#Letter builders
+    #Letter builders
 
-#Polutes the rep's address
-def rep_address
-"\n" + @recipient_name + "\n" + @recipient_address +
-"\n" + "Washington DC 20510" + "\n"
-end
+    #Polutes the rep's address
+  def rep_address
+    "\n" + @recipient_name + "\n" + @recipient_address.to_s +
+    "\n" + "Washington DC 20510" + "\n"
+  end
 
-def greeting
-"\n" + @recipient_lastname + ","
-end
+  def greeting
+    "\n" + @recipient_lastname + ","
+  end
 
 #Populates the paragraph, 'a', 'b' & 'c' are the order of each paragraph
 def body

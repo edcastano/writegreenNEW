@@ -34,6 +34,8 @@ gem 'therubyracer'
 gem 'thin' #web server
 gem 'geokit'
 gem 'congress'
+gem 'google-api-client'
+gem 'rest-client', '~> 2.0', '>= 2.0.2'
 #gem 'rubygems'
 # gem 'luigi-sunlight'
 #sudo gem install  --source=http://gems.github.com
