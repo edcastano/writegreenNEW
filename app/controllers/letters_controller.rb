@@ -116,7 +116,7 @@ class LettersController < ApplicationController
   @rep_address = Hash[[[@sen_senator_title, @sen_senator_address], [@jun_senator_title, @jun_senator_address], [@rep_title, @rep_address]]]
 
   if @rep_address[@recipient] != nil
-    @recipient_address = @rep_address[@recipient]
+    @recipient_address = "Line1: " + @rep_address[@recipient].first[:line1] + ", city: "+ @rep_address[@recipient].first[:city] + ", state: "+ @rep_address[@recipient].first[:state] + ", zip: "+ @rep_address[@recipient].first[:zip]
     @recipient_lastname = @recipient
     @recipient_name = @recipient
   end

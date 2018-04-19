@@ -28,7 +28,7 @@ module LettersHelper
 
     #Polutes the rep's address
   def rep_address
-    "\n" + @recipient_name + "\n" + @recipient_address.to_s +
+    "\n" + @recipient_name + "\n" + @recipient_address +
     "\n" + "Washington DC 20510" + "\n"
   end
 
