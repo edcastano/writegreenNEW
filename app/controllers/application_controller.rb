@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
   def get_recipient_list address
 		# response = RestClient::Request.execute(method: :get, url: 'https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDD8OUS69XKjX-hAk9QC6aeI5oMkVY9d8o&address=1263%20Pacific%20Ave.%20alaska%20City%20AK', timeout: 10)
     address = URI.encode(address)
-    response = RestClient::Request.execute(method: :get, url: "https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDD8OUS69XKjX-hAk9QC6aeI5oMkVY9d8o&address=#{address}&includeOffices=true&roles=legislatorUpperBody&roles=legislatorLowerBody", timeout: 10)
+    response = RestClient::Request.execute(method: :get, url: "https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyCuqxr-ZmZRwZfDkgVMGf44eRR9AC0Ue4A&address=#{address}&includeOffices=true&roles=legislatorUpperBody&roles=legislatorLowerBody", timeout: 10)
 		result = JSON.parse(response.body)
       senior_senator = result["officials"][0]
       junior_senator = result["officials"][1]
