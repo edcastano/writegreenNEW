@@ -9,7 +9,8 @@ gem 'rails', '3.2.22'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  gem 'pg', '~> 0.18'
 end
 group :development, :test do
   gem 'mysql2', '~> 0.3.18'
