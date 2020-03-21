@@ -10,6 +10,7 @@ gem 'rails', '3.2.22'
 
 group :production do
   gem 'pg'
+  gem 'activerecord-postgresql-adapter'
 end
 group :development, :test do
   gem 'mysql2', '~> 0.5.2'
