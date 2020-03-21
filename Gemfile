@@ -9,15 +9,14 @@ gem 'rails', '3.2.22'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
-  gem 'pg'
-  gem 'activerecord-postgresql-adapter'
+  # gem 'pg'
+  gem 'pg', '~> 0.18'
 end
 group :development, :test do
   gem 'mysql2', '~> 0.5.2'
   gem 'byebug'
   gem 'sqlite3'
 end
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -38,7 +37,8 @@ gem 'geokit'
 gem 'congress'
 gem 'rails_log_stdout'
 gem 'rails_12factor'
-
+gem 'google-api-client'
+gem 'rest-client', '~> 2.0', '>= 2.0.2'
 #gem 'rubygems'
 # gem 'luigi-sunlight'
 #sudo gem install  --source=http://gems.github.com

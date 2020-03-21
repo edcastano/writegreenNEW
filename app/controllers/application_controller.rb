@@ -1,4 +1,6 @@
 require 'congress'
+require 'uri'
+require 'hashie/mash'
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
@@ -47,5 +49,48 @@ class ApplicationController < ActionController::Base
     new_data_congress[:representative] = Hashie::Mash.new(new_representative)
 
     return new_data_congress
+  end
+
+  def get_recipient_list address
+		# response = RestClient::Request.execute(method: :get, url: 'https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDD8OUS69XKjX-hAk9QC6aeI5oMkVY9d8o&address=1263%20Pacific%20Ave.%20alaska%20City%20AK', timeout: 10)
+    address = URI.encode(address)
+    response = RestClient::Request.execute(method: :get, url: "https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyCuqxr-ZmZRwZfDkgVMGf44eRR9AC0Ue4A&address=#{address}&includeOffices=true&roles=legislatorUpperBody&roles=legislatorLowerBody", timeout: 10)
+		result = JSON.parse(response.body)
+      senior_senator = result["officials"][0]
+      junior_senator = result["officials"][1]
+      representative = result["officials"][2]
+
+      # data senior senator
+      new_senior_senator = Hash.new
+
+      new_senior_senator[:name]           = senior_senator["name"]
+      new_senior_senator[:congress_office]= senior_senator["address"]
+      new_senior_senator[:facebook_id]    = senior_senator["channels"].select{|a| a["id"] if a["type"] == "Facebook" }.first["id"]
+      new_senior_senator[:twitter_id]     = senior_senator["channels"].select{|a| a["id"] if a["type"] == "Twitter" }.first["id"]
+
+      # end data senior senator
+
+      # data junior senator
+      new_junior_senator = Hash.new
+      new_junior_senator[:name]      = junior_senator["name"] rescue nil
+      new_junior_senator[:congress_office]= junior_senator["address"] rescue nil
+      new_junior_senator[:facebook_id]    = junior_senator["channels"].select{|a| a["id"] if a["type"] == "Facebook" }.first["id"] rescue nil
+      new_junior_senator[:twitter_id]     = junior_senator["channels"].select{|a| a["id"] if a["type"] == "Twitter" }.first["id"]  rescue nil
+      # end data junior senator 
+
+      # data representative
+      new_representative = Hash.new
+      new_representative[:name]      = representative["name"] rescue nil
+      new_representative[:congress_office]= representative["address"] rescue nil
+      new_representative[:facebook_id]    = representative["channels"].select{|a| a["id"] if a["type"] == "Facebook" }.first["id"] rescue nil
+      new_representative[:twitter_id]     = representative["channels"].select{|a| a["id"] if a["type"] == "Twitter" }.first["id"] rescue nil
+      # end data representative
+
+      new_data_congress = Hash.new
+      new_data_congress[:senior_senator] = Hashie::Mash.new(new_senior_senator) rescue nil
+      new_data_congress[:junior_senator] = Hashie::Mash.new(new_junior_senator) rescue nil
+      new_data_congress[:representative] = Hashie::Mash.new(new_representative) rescue nil
+
+		return new_data_congress
   end
 end
