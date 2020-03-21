@@ -12,7 +12,7 @@ group :production do
   gem 'pg'
 end
 group :development, :test do
-  gem 'mysql2', '~> 0.3.18'
+  gem 'mysql2', '~> 0.5.2'
   gem 'byebug'
   gem 'sqlite3'
 end
@@ -30,7 +30,8 @@ gem 'jquery-rails'
 # gem 'sunlight'#, "~> 1.1.0", :git=>'https://github.com/sunlightlabs/ruby-sunlight.git' 
 gem 'ym4r'#,:git=>'https://github.com/nofxx/ym4r.git'
 gem 'json'
-gem 'therubyracer'
+gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer'
 gem 'thin' #web server
 gem 'geokit'
 gem 'congress'
