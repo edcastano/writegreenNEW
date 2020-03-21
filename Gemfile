@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.1.4'
+ruby '2.5.1'
 # gem 'heroku'
 
 # gem 'rails', '3.1.1'
