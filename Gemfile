@@ -36,6 +36,9 @@ gem 'therubyracer', platforms: :ruby
 gem 'thin' #web server
 gem 'geokit'
 gem 'congress'
+gem 'rails_log_stdout'
+gem 'rails_12factor'
+
 #gem 'rubygems'
 # gem 'luigi-sunlight'
 #sudo gem install  --source=http://gems.github.com
