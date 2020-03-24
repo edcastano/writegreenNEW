@@ -1,69 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Writegreen - Empowering Environmental Engagement</title>
-  <script type="text/javascript" src="//use.typekit.net/xfl1dlm.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <%= stylesheet_link_tag    "application" %>
-  <%= stylesheet_link_tag "print", :media => "print" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <meta property="og:image" content="http://writegreen.herokuapp.com/assets/logo.png"/>
-  <meta property="og:title" content="Write Green"/>
-  <meta property="og:url" content="http://writegreen.herokuapp.com<%=request.fullpath%>"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="Write Green"/>
-</head>
-<body>
-<div id="outside-wrapper"></div>
-<!-- Begin Wrapper -->
-   <div id="wrapper">
-   <!-- Begin Header -->
-     <div id="header">
-		 	<div id="logo-container">
-		 		<div id="logo">
-          <a href="<%=root_path%>"><img src="<%= (action_name == 'new' && controller_name == 'letters')? '../assets/logo.png' : '/assets/logo.png' %>"></a>
-		 			<%#= link_to image_tag("logo.png") %>
-		 		</div>
-		 		<div id="social">
-          <a href="http://www.facebook.com" target="_blank"><img src="<%= (action_name == 'new' && controller_name == 'letters')? '../assets/facebook_top.png' : '/assets/facebook_top.png' %>"></a>
-          <a href="http://www.twitter.com" target="_blank"><img src="<%= (action_name == 'new' && controller_name == 'letters')? '../assets/twitter_top.png' : '/assets/twitter_top.png' %>"></a>
-		 			<%#= link_to image_tag('facebook_top.png') %>
-		 			<%#= link_to image_tag('twitter_top.png') %>
-		 		</div>
-		 	</div>
-  	 </div>
-		 <!-- End Header -->
-		 <div id="top-content">
-		 	<h1>WriteGreen makes it easy to write to Congress about climate change.</h1>
-		 	<p>
-		 		Write letters to Congress that are more influential than the form letters commonly used today. It's like having a personal writing coach, but easier, faster, and free. We help you get started, but the real power is in telling your unique story.
-		 	</p>
-		 	<p>
-		 		What climate change angle are you?
-		 	</p>
-		 	<div class="letter-button-holder">
-		 		<a href="#" class="letter-button letter-button-start">Start your letter</a>
-		 	</div>
-		 </div>
-			<%= yield %>
-   </div>
-   <!-- End Wrapper -->
-   <div class="clear"></div>
-		 <div class="clear">
-    <%if Rails.env.development? %>
-    <%= debug(params) %>
-     <h3> These are your selections</h3><br>
-		  <%= @emphasis %><br>
-		  <%= @political_ideology %><br>
-		  <%= @religion %><br>
-		  <%= @geography %><br>
-    <br> <h3> Content variation </h3>
-     <%= "Body content is #{@r}" %><br>
-     <%= "Closing content is #{@c}.#{@v}" %><br>
-     <%= "We are on step #{@step}." %><br>
-    <% end %>
-    </div>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-</body>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
 </html>
