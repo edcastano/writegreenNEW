@@ -1,0 +1,153 @@
+
+      
+              		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		 
+		     
+        <h3 class="options unselect">1) Enter your information</h3>
+        <div id="letter_options">
+        <%= form_tag(edit_path, :method =>'get', :multipart => true) do %>       
+
+        <p>
+          <div class="field">
+          <%= label_tag(:name, "Name", :class => "label")%>
+          <%= text_field_tag(:name, @name, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:street_address, "Address", :class => "label")%>
+          <%= text_field_tag(:street_address, @street_address, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:city, "City", :class => "label")%>
+          <%= text_field_tag(:city, @city, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:state, "State", :class => "label")%>
+          <%= text_field_tag(:state, @state, :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="clear">
+          <%= label_tag(:zipcode, "Zipcode", :class => "label")%>
+          <%= text_field_tag(:zipcode, @zipcode, :class => "fieldset") %>
+          </div>
+        </p>
+		</div>
+		 
+		 <h3 class="options select">2) Customize your letter </h3>		
+    <div id="letter_options" class="clear" >
+				
+        <p>
+          <div class="field">
+          <%= label_tag(:recipient, "Recipient", :class => "label")%>
+          <%= select_tag(:recipient, options_for_select([@sen_senator_title,@jun_senator_title, @rep_title], :selected => @recipient),
+                         :class => "fieldset") %>
+          </div>
+        </p>
+
+        <p>
+          <div class="field">
+          <%= label_tag(:emphasis, "Emphasis", :class => "label")%>
+          <%= select_tag(:emphasis, options_for_select([['Health & Pollution', 'FamPollute'],
+		      ['Risk/Personal Values', 'RiskValues'],
+          ['Health & Economy', 'HealthEcon'],
+          ['National Security', 'NationalSec'],
+          ['Economic Growth', 'EconGrowth'],          
+          ['American Values', 'AmericanVal'],
+          ['Common sense', 'CommonSense']], :selected => @emphasis), :class => "fieldset") %>
+          </div>
+        </p>
+          <div class="field">
+          <%= label_tag(:ideology, "Perspective", :class => "label") %>
+          <%= select_tag(:ideology, options_for_select([['Moderate', 'Moderate'], ['Liberal', 'Liberal'],
+          ['Conservative', 'Conservative']], :selected => @political_ideology), :class => "fieldset") %>
+          </div>
+
+          <div class="field">
+          <%= label_tag(:religion, "Religion", :class => "label") %>
+          <%= select_tag(:religion, options_for_select([['Secular', 'Secular'],
+          ['Christian', 'Christian']], :selected => @religion), :class => "fieldset") %>
+          </div>
+
+          <div class="field">
+          <%= label_tag(:geography, "Geography", :class => "label") %>
+          <%= select_tag(:geography, options_for_select([['California', 'California'],
+          ['Other', 'Other']], :selected => @geography), :class => "fieldset") %>
+          </div> 
+          <p>
+         
+        </div>
+		  <div class="actions">
+            <%= submit_tag("3) Edit Letter", :class => "button fieldset") %>
+          </div>
+          </p>
+        <% end %>
+		 
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column -->
+      <% if @emphasis == nil %>
+		  <div id="rightcolumn" style="background-color:#eeeeee;">     
+   	    <h2>WriteGreen makes it easy to write to congress about climate change.</h2>
+  	    <h3>Your representatives will take notice.</h3>
+
+     		<div class="spacer">
+   			<div class="stepborder unhighlighted">
+   			 <div class="steps" >
+	  		   <h2 style="text-align:left"> 1) Enter your information </h2>
+         </div>         			  
+
+      
+      	<div class="steps instructions" > 
+      	Your information will be used to match you with your congressional representatives.       	    	
+      	</div>
+      	</div> 
+      	
+      	<div class="stepborder highlighted">
+      	 <div class="steps selected" >
+	  		   <h2 style="text-align:left"> 2) Customize your letter  </h2>
+         </div>  			  
+
+      	<div class="steps instructions" > 
+      	Select from the options for recipient, emphasis, perspective, etc.       	    	
+      	</div>
+      	</div>
+
+      	<div class="stepborder unhighlighted">      	
+      	<div class="steps" >
+	  		   <h2 style="text-align:left"> 3) Edit your letter </h2>
+         </div>  			  
+
+      	<div class="steps instructions" > 
+      	WriteGreen helps you get started, but the real power is in telling your unique story.       	    	
+      	</div>
+      	</div> 
+        </div>
+        </div>
+		  
+		     
+		 <% else %>		
+    
+    <textarea id="rightcolumn">
+      <%= letter %>   
+    </textarea>        
+     <% end %>	 
+		 
+		 <!-- End Right Column -->
+		 
+
+
+
+
