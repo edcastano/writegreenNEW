@@ -33,6 +33,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'geokit'
+gem 'jquery-rails'
+gem 'ym4r'#,:git=>'https://github.com/nofxx/ym4r.git'
+gem 'therubyracer', platforms: :ruby
+gem 'thin'
+gem 'geokit'
+gem 'congress'
+gem 'rails_12factor'
+gem 'google-api-client'
+gem 'rest-client'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
