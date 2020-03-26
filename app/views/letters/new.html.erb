@@ -4,9 +4,8 @@
       <div class="imagestep"></div>
       <h1>Enter your information</h1>
       <p>Your information will be used to match you to your congressional representatives.</p>
-      <%= form_tag(letters_path, :method =>'get', :multipart => true) do %>
         <div id="letter_options_new">
-
+          <%= form_tag(letters_path, :method =>'get', :multipart => true) do %>
           <p>
             <div class="field">
             <%= label_tag(:name, "Name", :class => "label")%></br>

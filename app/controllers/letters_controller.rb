@@ -6,14 +6,14 @@ class LettersController < ApplicationController
   def show
     @share_url = "http://writegreen.herokuapp.com/"
     @step = 2  #Used to set styling (color) for step buttons
-    @name = params[:name] || 'ahmad'
-    @street_address = params[:street_address] || 'gantungan'
-    @city = params[:city] || 'bandung'
-    @state = params[:state] || 'jabar'
-    @zipcode = params[:zipcode] || '40553'
-    debugger
+    @name = params[:name]
+    @street_address = params[:street_address]
+    @city = params[:city]
+    @state = params[:state]
+    @zipcode = params[:zipcode]
     @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
     @emphasis = params[:emphasis]
+
     if @emphasis != nil
       @emphasis = params[:emphasis]
       @political_ideology = params[:ideology]

@@ -43,8 +43,7 @@ $(document).ready(function() {
   $(".letter-button.step1").click(function() {
 
       var url = "letter"; // the script where you handle the form input.
-      console.log(this)
-      console.log($(this).parents('form').serialize());
+      console.log(this);
 
       $.ajax({
              type: "GET",
