@@ -1,0 +1,1270 @@
+/* line 1, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "proxima-nova";
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+/* line 9, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 12, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+h2 {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 19, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+h3 {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 23, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+h3.options {
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #66CD00;
+  color: #ffffff;
+  clear: both;
+}
+/* line 30, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+h3.options.select {
+  background: #006600;
+}
+/* line 33, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+h3.options.unselect {
+  background: #A6D785;
+  border: 2px solid #ccc;
+}
+
+/* line 40, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background-color: #f0f0f1;
+}
+
+/* line 46, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#wrapper {
+  margin: 0px auto;
+  width: 960px;
+  margin-top: -675px;
+}
+
+/* line 53, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#header {
+  background: #FFFFFF;
+  height: 145px;
+}
+
+/* line 62, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#logo {
+  float: left;
+  margin-left: 55px;
+  margin-top: 60px;
+}
+
+/* line 68, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#social {
+  float: right;
+  margin-top: 60px;
+  margin-right: 50px;
+}
+
+/* line 73, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#leftcolumn {
+  color: #333;
+  border: 2px solid #ccc;
+  background: #FFFFFF;
+  margin: 2.5px;
+  padding: 10px 0px 10px 0px;
+  height: 480px;
+  width: 220px;
+  float: left;
+  border-radius: 10px;
+}
+
+/* line 84, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#rightcolumn {
+  float: left;
+  color: #333;
+  border: 2px solid #ccc;
+  background: #FFFACD;
+  margin: 2.5px;
+  padding: 10px;
+  height: 480px;
+  width: 702px;
+  display: inline;
+  border-radius: 10px;
+  font-size: 12.5px;
+}
+
+/* line 97, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#footer {
+  width: 950px;
+  height: 73px;
+  clear: both;
+  color: #333;
+  border: 2px solid #ccc;
+  background: #FFFFFF;
+  margin: 2.5px 2px 50px 2px;
+  padding: 0px;
+  border-radius: 10px;
+  float: left;
+}
+
+/* line 110, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#final_instruct {
+  border-radius: 10px;
+  height: 30px;
+  width: 698px;
+  padding: 10px 10px 18px 0px;
+  margin: 0px;
+  clear: none;
+  border: 8px solid #006600;
+  float: right;
+  text-align: center;
+  background: #F0E68C;
+}
+
+/* line 123, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.spacer {
+  margin-top: 25px;
+}
+
+/* line 127, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.steps {
+  width: 263px;
+  height: 20px;
+  clear: none;
+  float: left;
+  color: #eeeeee;
+  border: 2px solid #ccc;
+  background: #A6D785;
+  margin: 5px 5px 15px 5px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+}
+/* line 138, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.steps.instructions {
+  width: 300px;
+  height: 40px;
+  color: #000000;
+  background: #ffffff;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  text-align: center;
+  clear: none;
+}
+/* line 148, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.steps.valid_address {
+  background: #F0E68C;
+  width: 179px;
+  height: 58px;
+  color: #000000;
+  background: #FFFACD;
+  margin: 5px 10px 5px 10px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  text-align: center;
+  clear: none;
+}
+/* line 160, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.steps.selected {
+  background: #006600;
+  color: #ffffff;
+}
+
+/* line 167, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.stepborder {
+  border-radius: 10px;
+  height: 75px;
+  width: 651px;
+  padding: 0px;
+  margin: auto;
+  clear: both;
+}
+/* line 174, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.stepborder.highlighted {
+  border: 4px solid #66CD00;
+}
+/* line 177, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.stepborder.unhighlighted {
+  border: none;
+}
+
+/* line 183, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 189, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#letter_options {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  width: 182px;
+  height: auto;
+  text-align: left;
+  float: left;
+  background-color: #CCCCCC;
+  border-radius: 10px;
+  padding: 5px 10px 10px 10px;
+}
+
+/* line 203, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.label {
+  float: left;
+  clear: both;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0px 0px 0px;
+  width: 5em;
+  border-width: 1px;
+}
+
+/* line 213, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.fieldset {
+  font-size: 1em;
+  float: right;
+  width: 110px;
+  margin: 5px 0px 0px 0px;
+  border-width: 1px;
+}
+
+/* line 221, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.clear {
+  clear: both;
+  height: 0;
+  /*overflow: hidden; */
+}
+
+/* line 227, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.button {
+  /*text-align: center;*/
+  border-top: 1px solid #a8e3b7;
+  background: #c8edbd;
+  background: -webkit-linear-gradient(top, #8ec15b, #c8edbd);
+  background: -moz-linear-gradient(top, #8ec15b, #c8edbd);
+  background: -ms-linear-gradient(top, #8ec15b, #c8edbd);
+  background: -o-linear-gradient(top, #8ec15b, #c8edbd);
+  padding: 7.5px 15px;
+  margin: 0px 8px 5px 8px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: black 0 1px 0;
+  -moz-box-shadow: black 0 1px 0;
+  box-shadow: black 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: #0f1f0e;
+  font-size: 1.2em;
+  font-style: bold;
+  text-decoration: none;
+  vertical-align: middle;
+  clear: both;
+  width: 202px;
+}
+/* line 251, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.button:hover {
+  border-top-color: #8ec15b;
+  background: #8ec15b;
+  color: #ffffff;
+}
+/* line 256, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.button:active {
+  border-top-color: #c8edbd;
+  background: #c8edbd;
+}
+
+/* line 262, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#outside-wrapper {
+  background: url("background_image.jpg");
+  height: 530px;
+  margin-top: 150px;
+  background-size: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 271, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#top-content {
+  height: 530px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 55px;
+  box-sizing: border-box;
+}
+
+/* line 279, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#top-content h1 {
+  font-size: 40px;
+  color: #333333;
+}
+
+/* line 284, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#top-content p {
+  margin-top: 33px;
+  font-size: 22px;
+  color: #666666;
+  line-height: 30px;
+}
+
+/* line 292, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.content-inside {
+  float: left;
+  display: inline-block;
+  width: 680px;
+}
+
+/* line 298, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.content-inside h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* line 303, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.content-inside p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* line 309, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.content-outside {
+  width: 170px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: inline-block;
+  border-top: 4px solid #f0f0f1;
+  border-bottom: 2px solid #f0f0f1;
+}
+
+/* line 318, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.content-outside h3 {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* line 324, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.content-outside p {
+  font-size: 17px;
+  color: #999999;
+  line-height: 26px;
+}
+
+/* line 330, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button-holder {
+  margin-top: 45px;
+}
+
+/* line 334, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#sharingitems .letter-button {
+  height: 37px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 197px;
+  box-sizing: border-box;
+  margin-bottom: 17px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 345, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  background-color: #80ac40;
+  padding-bottom: 12px;
+  padding-top: 13px;
+  border: none;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  display: block;
+  width: 210px;
+  padding-right: 0;
+  padding-left: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 11px 19px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-image: url("small_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 190px center;
+  text-align: left;
+}
+
+/* line 383, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button:hover {
+  cursor: pointer;
+}
+
+/* line 387, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+span.greenarrow:hover {
+  cursor: pointer;
+}
+
+/* line 390, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.print {
+  background: #80ac40;
+}
+
+/* line 394, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.print span {
+  background: url("printer.png") no-repeat;
+  padding-left: 30px;
+}
+
+/* line 399, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.email {
+  background: #b8ce31;
+}
+
+/* line 403, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.email span {
+  background: url("email.png") no-repeat;
+  padding-left: 30px;
+}
+
+/* line 408, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.twitter {
+  background: #45b0e3;
+}
+
+/* line 411, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.twitter a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 415, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.facebook a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 419, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.twitter span {
+  background: url("twitter_button.png") no-repeat;
+  padding-left: 30px;
+}
+
+/* line 424, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.facebook {
+  background: #39599f;
+}
+
+/* line 428, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.randomize {
+  background: #cccccc;
+  width: 140px;
+  height: 33px;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  right: 100px;
+  top: 209px;
+  padding-top: 9px;
+  padding-left: 32px;
+}
+
+/* line 441, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.facebook span {
+  background: url("facebook_button.png") no-repeat 6px 0;
+  padding-left: 30px;
+}
+
+/* line 446, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.step1 {
+  font-size: 17px;
+  float: left;
+}
+
+/* line 452, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.letter-button.step2 {
+  font-size: 17px;
+  float: left;
+}
+
+/* line 459, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.greenarrow {
+  display: block;
+  width: 36px;
+  height: 37px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: url("green_arrow.png") no-repeat 10px 13px #f1f1f1;
+}
+
+/* line 469, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.new-form-box {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 55px;
+  height: 500px;
+  border-bottom: 9px solid #e0e0e0;
+  margin-top: 60px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* line 481, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+input[type="text"] {
+  color: #666666;
+  font-size: 14px;
+  padding: 9px 0 9px 10px;
+  text-indent: 1px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #f0f0f1;
+  border-color: transparent;
+  cursor: default;
+}
+
+/* line 496, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#letter_options_new .chzn-search input {
+  height: 30px;
+}
+
+/* line 500, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#letter_options_new input {
+  box-sizing: border-box;
+  height: 40px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 507, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#letter_options_new .field {
+  float: left;
+}
+
+/* line 511, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#letter_options_new .label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+}
+
+/* line 516, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+input#name {
+  margin-right: 45px;
+}
+
+/* line 520, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+input#name, input#street_address {
+  width: 295px;
+}
+
+/* line 524, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#recipient_chzn {
+  margin-right: 45px;
+  width: 295px !important;
+}
+
+/* line 529, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#emphasis_chzn {
+  width: 295px !important;
+}
+
+/* line 533, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#ideology_chzn, #religion_chzn, #geography_chzn {
+  width: 180px !important;
+  margin-right: 50px;
+}
+
+/* line 538, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.field-top {
+  margin-top: 25px;
+}
+
+/* line 542, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#geography_chzn {
+  margin-right: 0px;
+}
+
+/* line 546, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+input#city {
+  width: 185px;
+  margin-right: 45px;
+}
+
+/* line 551, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+input#zipcode {
+  margin-left: 45px;
+  width: 95px;
+}
+
+/* line 555, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+label[for=zipcode] {
+  margin-left: 45px;
+}
+
+/* line 559, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.imagestep {
+  background: url("step_1.png") no-repeat -10px -10px;
+  height: 45px;
+}
+
+/* line 564, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.form-2 .imagestep {
+  background: url("step_2.png") no-repeat -1px 0px;
+  height: 45px;
+}
+
+/* line 569, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.form-3 .imagestep {
+  background: url("step_3.png") no-repeat -1px 0px;
+  height: 45px;
+}
+
+/* line 575, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.form-3 .content-inside {
+  width: auto;
+  float: none;
+  display: block;
+}
+
+/* line 581, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#lettercontainer {
+  width: 600px;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+/* line 587, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+#sharingitems {
+  width: 200px;
+  float: left;
+  display: inline-block;
+}
+
+/* line 594, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.new-form-box.form-3 {
+  height: auto;
+  min-height: 500px;
+  margin-bottom: 100px;
+}
+
+/* line 600, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+textarea#finalletter {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 600px !important;
+  border: none;
+  background: #f0f0f1;
+  font-size: 15px;
+  color: #666666;
+  line-height: 22px;
+  border-radius: 4px;
+  padding: 34px;
+  height: 850px !important;
+}
+
+/* line 615, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.error {
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #b94a48;
+  font-size: 16px;
+}
+
+/* @group Base */
+/* line 625, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container {
+  font-size: 14px;
+  color: #666666;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  width: 265px !important;
+  height: 40px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 639, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-drop {
+  background: #f0f0f1;
+  border-top: 0;
+  position: absolute;
+  top: 100%;
+  left: -9999px;
+  z-index: 1010;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 654, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container.chzn-with-drop .chzn-drop {
+  left: 0;
+}
+
+/* @end */
+/* @group Single Chosen */
+/* line 661, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-single {
+  background-color: #f0f0f1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  line-height: 24px;
+  padding: 10px 0 0 8px;
+  color: #666666;
+  height: 40px;
+  margin-top: 5px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* line 681, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-default {
+  color: #999;
+  background: #f0f0f1;
+  height: 40px;
+  margin-top: 5px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 689, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-single span {
+  margin-right: 26px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 698, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-single abbr {
+  display: block;
+  position: absolute;
+  right: 26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  font-size: 1px;
+  background: url("chosen-sprite.png") -42px 1px no-repeat;
+}
+
+/* line 708, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-single abbr:hover {
+  background-position: -42px -10px;
+}
+
+/* line 711, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single.chzn-disabled .chzn-single abbr:hover {
+  background-position: -42px -10px;
+}
+
+/* line 714, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-single div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 18px;
+}
+
+/* line 722, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-single div b {
+  background: url("chosen-sprite.png") no-repeat 0px 12px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 728, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-search {
+  padding: 3px 4px;
+  position: relative;
+  margin: 0;
+  white-space: nowrap;
+  z-index: 1010;
+}
+
+/* line 735, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-search input {
+  background: #fff;
+  padding: 4px 20px 4px 5px;
+  outline: 0;
+  border: 1px solid #aaa;
+  font-family: sans-serif;
+  font-size: 1em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 749, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single .chzn-drop {
+  margin-top: -1px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+/* line 755, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single-nosearch .chzn-search {
+  position: absolute;
+  left: -9999px;
+}
+
+/* @end */
+/* @group Multi Chosen */
+/* line 762, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);
+  border: 1px solid #aaa;
+  margin: 0;
+  padding: 0;
+  cursor: text;
+  overflow: hidden;
+  height: auto !important;
+  height: 1%;
+  position: relative;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 786, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices li {
+  float: left;
+  list-style: none;
+}
+
+/* line 790, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-field {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 795, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-field input {
+  color: #666;
+  background: transparent !important;
+  border: 0 !important;
+  font-family: sans-serif;
+  font-size: 100%;
+  height: 15px;
+  padding: 5px;
+  margin: 1px 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 809, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-field .default {
+  color: #999;
+}
+
+/* line 812, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-choice {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #e4e4e4;
+  color: #333;
+  line-height: 13px;
+  padding: 3px 20px 3px 5px;
+  margin: 3px 0 3px 5px;
+  position: relative;
+  cursor: default;
+}
+
+/* line 824, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-choice.search-choice-disabled {
+  background-color: #e4e4e4;
+  color: #666;
+  padding-right: 5px;
+}
+
+/* line 829, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-choice-focus {
+  background: #d4d4d4;
+}
+
+/* line 832, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+  display: block;
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  font-size: 1px;
+  background: url("chosen-sprite.png") -42px 1px no-repeat;
+}
+
+/* line 842, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close:hover {
+  background-position: -42px -10px;
+}
+
+/* line 845, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-choices .search-choice-focus .search-choice-close {
+  background-position: -42px -10px;
+}
+
+/* @end */
+/* @group Results */
+/* line 851, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results {
+  max-height: 240px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 860, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-results {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 864, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results li {
+  display: none;
+  line-height: 40px;
+  padding: 5px 6px;
+  margin: 0;
+  border-bottom: 1px solid #f2f2f2;
+  height: 40px;
+  color: #999999;
+  list-style: none;
+  box-sizing: border-box;
+  background: #f7f7f7;
+  padding: 0 0 0 4px;
+}
+
+/* line 877, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results .active-result {
+  cursor: pointer;
+  display: list-item;
+}
+
+/* line 881, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results .highlighted {
+  background-color: #f0f0f1;
+  color: #999999;
+}
+
+/* line 885, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results li em {
+  background: #feffde;
+  font-style: normal;
+}
+
+/* line 889, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results .highlighted em {
+  background: transparent;
+}
+
+/* line 892, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results .no-results {
+  background: #f4f4f4;
+  display: list-item;
+}
+
+/* line 896, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results .group-result {
+  cursor: default;
+  color: #999;
+  font-weight: bold;
+}
+
+/* line 901, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results .group-option {
+  padding-left: 15px;
+}
+
+/* line 904, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-multi .chzn-drop .result-selected {
+  display: none;
+}
+
+/* line 907, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results-scroll {
+  background: #f7f7f7;
+  position: absolute;
+  text-align: center;
+  width: 321px;
+  /* This should by dynamic with js */
+  z-index: 1;
+}
+
+/* line 914, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results-scroll span {
+  display: inline-block;
+  height: 17px;
+  text-indent: -5000px;
+  width: 9px;
+}
+
+/* line 920, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results-scroll-down {
+  bottom: 0;
+}
+
+/* line 923, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results-scroll-down span {
+  background: url("chosen-sprite.png") no-repeat -4px -3px;
+}
+
+/* line 926, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container .chzn-results-scroll-up span {
+  background: url("chosen-sprite.png") no-repeat -22px -3px;
+}
+
+/* @end */
+/* @group Active  */
+/* line 937, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-active.chzn-with-drop .chzn-single {
+  background-color: #f0f0f1;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 947, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-active.chzn-with-drop .chzn-single div {
+  border-left: none;
+}
+
+/* line 951, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-active.chzn-with-drop .chzn-single div b {
+  background-position: -18px 10px;
+}
+
+/* line 960, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-active .chzn-choices .search-field input {
+  color: #111 !important;
+}
+
+/* @end */
+/* @group Disabled Support */
+/* line 966, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-disabled {
+  cursor: default;
+  opacity: 0.5 !important;
+}
+
+/* line 970, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-disabled .chzn-single {
+  cursor: default;
+}
+
+/* line 973, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-disabled .chzn-choices .search-choice .search-choice-close {
+  cursor: default;
+}
+
+/* @group Right to Left */
+/* line 978, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl {
+  text-align: right;
+}
+
+/* line 979, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-single {
+  padding: 0 8px 0 0;
+  overflow: visible;
+}
+
+/* line 980, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-single span {
+  margin-left: 26px;
+  margin-right: 0;
+  direction: rtl;
+}
+
+/* line 982, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-single div {
+  left: 3px;
+  right: auto;
+}
+
+/* line 983, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-single abbr {
+  left: 26px;
+  right: auto;
+}
+
+/* line 987, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-choices .search-field input {
+  direction: rtl;
+}
+
+/* line 988, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-choices li {
+  float: right;
+}
+
+/* line 989, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-choices .search-choice {
+  padding: 3px 5px 3px 19px;
+  margin: 3px 5px 3px 0;
+}
+
+/* line 990, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-choices .search-choice .search-choice-close {
+  left: 4px;
+  right: auto;
+}
+
+/* line 991, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-search {
+  left: 9999px;
+}
+
+/* line 992, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl.chzn-with-drop .chzn-search {
+  left: 0px;
+}
+
+/* line 993, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-drop {
+  left: 9999px;
+}
+
+/* line 994, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl.chzn-container-single .chzn-results {
+  margin: 0 0 4px 4px;
+  padding: 0 4px 0 0;
+}
+
+/* line 995, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-results .group-option {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+/* line 996, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl.chzn-container-active.chzn-with-drop .chzn-single div {
+  border-right: none;
+}
+
+/* line 997, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-rtl .chzn-search input {
+  background: #fff url("chosen-sprite.png") no-repeat -30px -20px;
+  background: url("chosen-sprite.png") no-repeat -30px -20px, -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+  background: url("chosen-sprite.png") no-repeat -30px -20px, -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background: url("chosen-sprite.png") no-repeat -30px -20px, -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background: url("chosen-sprite.png") no-repeat -30px -20px, -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background: url("chosen-sprite.png") no-repeat -30px -20px, linear-gradient(#eeeeee 1%, #ffffff 15%);
+  padding: 4px 5px 4px 20px;
+  direction: rtl;
+}
+
+/* line 1007, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single.chzn-rtl .chzn-single div b {
+  background-position: 6px 2px;
+}
+
+/* line 1010, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+.chzn-container-single.chzn-rtl.chzn-with-drop .chzn-single div b {
+  background-position: -12px 2px;
+}
+
+/* @end */
+/* @group Retina compatibility */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+  /* line 1017, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+  .chzn-rtl .chzn-search input, .chzn-container-single .chzn-single abbr, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-search input, .chzn-container-multi .chzn-choices .search-choice .search-choice-close, .chzn-container .chzn-results-scroll-down span, .chzn-container .chzn-results-scroll-up span {
+    background-image: url("chosen-sprite@2x.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 52px 37px !important;
+  }
+}
+/* @end */
+@media print {
+  /* line 1028, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+  body * {
+    visibility: hidden;
+  }
+
+  /* line 1031, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+  #finalletter, #finalletter * {
+    visibility: visible;
+  }
+
+  /* line 1034, /Users/elvinalviansiagian/Documents/projects/projects/writegreenNEW/app/assets/stylesheets/application.scss */
+  #finalletter {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
