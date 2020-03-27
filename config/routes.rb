@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "letters#new"
   resources :sentences
   resources :letters
-  get 'letter', to: "letters#show", :as => 'letter'
+  get 'letter', to: "letters#show"
   get 'home', to: "letters#new"
   get 'edit', to: "letters#edit"
 end
