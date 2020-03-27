@@ -52,10 +52,10 @@ class ApplicationController < ActionController::Base
   end
 
   def get_recipient_list address
-		# response = RestClient::Request.execute(method: :get, url: 'https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDD8OUS69XKjX-hAk9QC6aeI5oMkVY9d8o&address=1263%20Pacific%20Ave.%20alaska%20City%20AK', timeout: 10)
+    # response = RestClient::Request.execute(method: :get, url: 'https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDD8OUS69XKjX-hAk9QC6aeI5oMkVY9d8o&address=1263%20Pacific%20Ave.%20alaska%20City%20AK', timeout: 10)
     address = URI.encode(address)
     response = RestClient::Request.execute(method: :get, url: "https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyCuqxr-ZmZRwZfDkgVMGf44eRR9AC0Ue4A&address=#{address}&includeOffices=true&roles=legislatorUpperBody&roles=legislatorLowerBody", timeout: 10)
-		result = JSON.parse(response.body)
+    result = JSON.parse(response.body)
       senior_senator = result["officials"][0]
       junior_senator = result["officials"][1]
       representative = result["officials"][2]
@@ -91,6 +91,7 @@ class ApplicationController < ActionController::Base
       new_data_congress[:junior_senator] = Hashie::Mash.new(new_junior_senator) rescue nil
       new_data_congress[:representative] = Hashie::Mash.new(new_representative) rescue nil
 
-		return new_data_congress
+    return new_data_congress
   end
 end
+

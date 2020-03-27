@@ -5,7 +5,7 @@ module LettersHelper
   # The 'Focus' variable is a variable for the specific user selection.
 
   def get_content(focus, focus_header)
-    (1..count_variations(focus, focus_header)).collect{|counter| pull_entry(focus, counter, focus_header)}.join(' ').squish
+    (1..(count_variations(focus, focus_header)).to_i).collect{|counter| pull_entry(focus, counter, focus_header)}.join(' ').squish
   end
 
   # Reads the total number of entries for the 'focus'/'focus_head' selection.

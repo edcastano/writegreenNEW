@@ -13,6 +13,7 @@ class LettersController < ApplicationController
     @zipcode = params[:zipcode]
     @address = @street_address + ' ' + @city + ", " + @state + ' ' + @zipcode
     @emphasis = params[:emphasis]
+
     if @emphasis != nil
       @emphasis = params[:emphasis]
       @political_ideology = params[:ideology]
